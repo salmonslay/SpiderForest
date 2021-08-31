@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 1466022551}
   - component: {fileID: 1466022552}
   m_Layer: 0
-  m_Name: alienPink_jump
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -516,6 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  jumpForce: 10
 --- !u!1 &1510653097
 GameObject:
   m_ObjectHideFlags: 0
