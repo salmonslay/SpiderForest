@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  jumpForce: 2.5
+  jumpForce: 4
   groundCheck: {fileID: 1015218216}
 --- !u!1 &1510653097
 GameObject:
