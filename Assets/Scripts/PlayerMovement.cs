@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Move character
         Vector3 moveBy = new Vector3(horizontal, 0, 0);
-        transform.Translate(moveBy * Time.deltaTime * speed);
+        transform.Translate(moveBy * Time.fixedDeltaTime * speed);
 
         //Flip character
         if (horizontal > 0.2f)
