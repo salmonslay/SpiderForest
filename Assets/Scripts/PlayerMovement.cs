@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float speed = 3f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Vector3 moveBy = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
-        transform.Translate(moveBy * Time.deltaTime);
+        transform.Translate(moveBy * Time.deltaTime * speed);
     }
 }
