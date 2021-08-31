@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        //Check if character is on ground
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f);
         bool isGrounded = false;
         foreach (Collider2D collider in colliders)
@@ -26,9 +27,18 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        Vector3 moveBy = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+        //Move character
+        float horizontal = Input.GetAxis("Horizontal");
+        Vector3 moveBy = new Vector3(horizontal, 0, 0);
         transform.Translate(moveBy * Time.deltaTime * speed);
 
+        //Flip character
+        if (horizontal > 0.2f)
+            transform.localScale = new Vector3(1, 1, 1);
+        else if (horizontal < -0.2f)
+            transform.localScale = new Vector3(-1, 1, 1);
+
+        //Check jumping
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             body.AddForce(new Vector2(0, jumpForce * 100));
     }
