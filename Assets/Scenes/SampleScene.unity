@@ -2191,7 +2191,7 @@ GameObject:
   - component: {fileID: 2010199676}
   m_Layer: 0
   m_Name: PurpleSlime
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2337,6 +2337,7 @@ GameObject:
   - component: {fileID: 2055847811}
   - component: {fileID: 2055847810}
   - component: {fileID: 2055847812}
+  - component: {fileID: 2055847813}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -3628,3 +3629,15 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &2055847813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055847808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a80b655a19cc5489eb16e1d5848c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

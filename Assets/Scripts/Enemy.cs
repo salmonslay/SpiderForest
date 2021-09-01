@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
     public void Kill()
     {
         isAlive = false;
-        Destroy(GetComponent<BoxCollider2D>());
+        GetComponent<BoxCollider2D>().isTrigger = true;
         body.AddForce(new Vector2(movementDirection, 4f), ForceMode2D.Impulse);
     }
 }
