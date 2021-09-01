@@ -4,34 +4,31 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 3f;
     public float jumpForce = 2.5f;
+    private float horizontal = 0f;
+
     public Transform groundCheck;
     private Rigidbody2D body;
-    private float horizontal = 0f;
+    private Animator animator;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        //Check if character is on ground
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f);
-        bool isGrounded = false;
-        foreach (Collider2D collider in colliders)
-        {
-            if (!collider.CompareTag("Player"))
-            {
-                isGrounded = true; break;
-            }
-        }
+        bool isGrounded = IsGrounded();
 
         //Check jumping
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-            body.AddForce(new Vector2(0, jumpForce * 100));
+            Jump();
 
         //Check controls
         horizontal = Input.GetAxis("Horizontal");
+
+        animator.SetBool("IsGrounded", isGrounded);
+        animator.SetFloat("Velocity", Mathf.Abs(horizontal));
     }
 
     private void FixedUpdate()
@@ -47,8 +44,35 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
     }
 
+    /// <summary>
+    /// Check if character is colliding with ground
+    /// </summary>
+    public bool IsGrounded()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f);
+        foreach (Collider2D collider in colliders)
+        {
+            if (!collider.CompareTag("Player"))
+                return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Check whether the character is falling or not by velocity
+    /// </summary>
+    /// <returns></returns>
     public bool IsFalling()
     {
         return body.velocity.y < -1;
+    }
+
+    /// <summary>
+    /// Add force to player and start jumping animation
+    /// </summary>
+    public void Jump()
+    {
+        body.AddForce(new Vector2(0, jumpForce * 100));
+        animator.SetTrigger("Jump");
     }
 }
