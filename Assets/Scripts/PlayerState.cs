@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    public int hp = 3;
+    [HideInInspector]
+    public int hp;
+
+    public int maxHP = 3;
+    private Vector3 respawnPosition;
 
     private void Start()
     {
-        UIManager.Instance.HP.maxValue = hp;
+        respawnPosition = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        UIManager.Instance.HP.maxValue = maxHP;
+        Spawn();
     }
 
     private void Update()
@@ -25,7 +31,13 @@ public class PlayerState : MonoBehaviour
 
         if (hp <= 0)
         {
-            // die
+            Spawn();
         }
+    }
+
+    public void Spawn()
+    {
+        hp = maxHP;
+        transform.position = respawnPosition;
     }
 }
