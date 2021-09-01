@@ -4,19 +4,18 @@ public class Enemy : MonoBehaviour
 {
     public float speed = 5f;
     public float movementDirection = 1f;
+    public bool isAlive = true;
+
     public Transform groundCheck;
     private Rigidbody2D body;
-    public bool isAlive = true;
     private Animator animator;
 
-    // Start is called before the first frame update
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     private void Update()
     {
         bool isGrounded = TouchesGround();
@@ -56,7 +55,8 @@ public class Enemy : MonoBehaviour
     }
 
     /// <summary>
-    /// Kill this enemy
+    /// Kill this enemy.
+    /// Applies force and removes collision.
     /// </summary>
     public void Kill()
     {

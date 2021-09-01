@@ -8,13 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private float horizontal = 0f;
 
-    // Start is called before the first frame update
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     private void Update()
     {
         //Check if character is on ground
