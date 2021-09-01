@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
         bool isGrounded = false;
         foreach (Collider2D collider in colliders)
         {
-            if (collider.tag != "Player")
+            if (!collider.CompareTag("Player"))
             {
                 isGrounded = true; break;
             }
