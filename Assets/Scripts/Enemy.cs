@@ -6,24 +6,30 @@ public class Enemy : MonoBehaviour
     public float movementDirection = 1f;
     public Transform groundCheck;
     private Rigidbody2D body;
-    private bool isAlive = true;
+    public bool isAlive = true;
+    private Animator animator;
 
     // Start is called before the first frame update
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     private void Update()
     {
+        bool isGrounded = TouchesGround();
+        animator.SetBool("IsAlive", isAlive);
+        animator.SetBool("IsGrounded", isGrounded);
+
         if (isAlive)
         {
             Vector3 moveBy = Vector3.zero;
             moveBy.x = speed * Time.deltaTime * movementDirection;
             transform.Translate(moveBy);
 
-            if (!TouchesGround()) ChangeDirection();
+            if (!isGrounded) ChangeDirection();
         }
     }
 
