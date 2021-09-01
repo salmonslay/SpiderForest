@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
     public float movementDirection = 1f;
     public Transform groundCheck;
     private Rigidbody2D body;
+    private bool isAlive = true;
 
     // Start is called before the first frame update
     private void Start()
@@ -16,11 +17,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Vector3 moveBy = Vector3.zero;
-        moveBy.x = speed * Time.deltaTime * movementDirection;
-        transform.Translate(moveBy);
+        if (isAlive)
+        {
+            Vector3 moveBy = Vector3.zero;
+            moveBy.x = speed * Time.deltaTime * movementDirection;
+            transform.Translate(moveBy);
 
-        if (!TouchesGround()) ChangeDirection();
+            if (!TouchesGround()) ChangeDirection();
+        }
     }
 
     /// <summary>
@@ -43,5 +47,15 @@ public class Enemy : MonoBehaviour
     {
         movementDirection *= -1;
         transform.localScale = new Vector3(movementDirection, 1f);
+    }
+
+    /// <summary>
+    /// Kill this enemy
+    /// </summary>
+    public void Kill()
+    {
+        isAlive = false;
+        Destroy(GetComponent<BoxCollider2D>());
+        body.AddForce(new Vector2(movementDirection, 4f), ForceMode2D.Impulse);
     }
 }

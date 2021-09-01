@@ -48,4 +48,9 @@ public class PlayerMovement : MonoBehaviour
         else if (horizontal < -0.2f)
             transform.localScale = new Vector3(-1, 1, 1);
     }
+
+    public bool IsFalling()
+    {
+        return body.velocity.y < -1;
+    }
 }
