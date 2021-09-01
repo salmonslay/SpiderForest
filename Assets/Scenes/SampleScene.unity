@@ -580,6 +580,7 @@ GameObject:
   - component: {fileID: 1466022550}
   - component: {fileID: 1466022549}
   - component: {fileID: 1466022552}
+  - component: {fileID: 1466022553}
   - component: {fileID: 1466022548}
   - component: {fileID: 1466022551}
   m_Layer: 6
@@ -717,6 +718,19 @@ MonoBehaviour:
   speed: 5
   jumpForce: 8
   groundCheck: {fileID: 1015218216}
+--- !u!114 &1466022553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466022547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf290a312295ab34294df0a9f1693045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3
 --- !u!1 &1510653097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,6 +2201,7 @@ GameObject:
   - component: {fileID: 2010199675}
   - component: {fileID: 2010199674}
   - component: {fileID: 2010199678}
+  - component: {fileID: 2010199679}
   - component: {fileID: 2010199677}
   - component: {fileID: 2010199676}
   m_Layer: 0
@@ -2325,6 +2340,19 @@ MonoBehaviour:
   speed: 1
   movementDirection: 1
   groundCheck: {fileID: 985473804}
+--- !u!114 &2010199679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010199673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a401e28e3f82f1c4c87f9c9d3e522167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &2055847808
 GameObject:
   m_ObjectHideFlags: 0

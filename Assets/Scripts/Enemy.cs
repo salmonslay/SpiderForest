@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
     /// <summary>
     /// Change scale and movement direction of enemy
     /// </summary>
-    private void ChangeDirection()
+    public void ChangeDirection()
     {
         movementDirection *= -1;
         transform.localScale = new Vector3(movementDirection, 1f);
