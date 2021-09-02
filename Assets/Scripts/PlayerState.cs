@@ -5,6 +5,7 @@ public class PlayerState : MonoBehaviour
     [HideInInspector]
     public int hp;
 
+    private int coins = 0;
     public int maxHP = 3;
     private Vector3 respawnPosition;
 
@@ -18,6 +19,7 @@ public class PlayerState : MonoBehaviour
     private void Update()
     {
         UIManager.Instance.HP.value = hp;
+        UIManager.Instance.Coins.text = coins.ToString();
     }
 
     /// <summary>
@@ -50,5 +52,10 @@ public class PlayerState : MonoBehaviour
     {
         hp = maxHP;
         transform.position = respawnPosition;
+    }
+
+    public void PickCoin(int amount = 1)
+    {
+        coins += amount;
     }
 }
