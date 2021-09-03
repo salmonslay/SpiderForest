@@ -15,4 +15,24 @@ public class Elevator : MonoBehaviour
             if (++targetIndex == nodes.Length) targetIndex = 0;
         }
     }
+
+    /// <summary>
+    /// Hook player to elevator for smoother movements
+    /// </summary>
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Transform col = collision.gameObject.transform;
+        if (col.CompareTag("Player"))
+            col.SetParent(transform);
+    }
+
+    /// <summary>
+    /// Unhook player when they leave the elevator
+    /// </summary>
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Transform col = collision.gameObject.transform;
+        if (col.CompareTag("Player"))
+            col.parent = null;
+    }
 }
