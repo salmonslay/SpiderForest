@@ -6,5 +6,7 @@ public class WaterBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
             Destroy(collision.gameObject, 0.5f);
+        else if (collision.CompareTag("Player"))
+            collision.GetComponent<PlayerState>().Spawn();
     }
 }
