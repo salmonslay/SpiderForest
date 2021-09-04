@@ -6,10 +6,10 @@ public class Elevator : MonoBehaviour
     private int targetIndex = 0;
     public float speed = 5f;
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector3 target = nodes[targetIndex].position;
-        transform.position = Vector2.MoveTowards(transform.position, target, 5 * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, 5 * Time.fixedDeltaTime);
         if (transform.position == target)
         {
             if (++targetIndex == nodes.Length) targetIndex = 0;
