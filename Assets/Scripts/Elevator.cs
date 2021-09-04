@@ -19,9 +19,9 @@ public class Elevator : MonoBehaviour
     /// <summary>
     /// Hook player to elevator for smoother movements
     /// </summary>
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Transform col = collision.gameObject.transform;
+        Transform col = collision.transform;
         if (col.CompareTag("Player"))
             col.SetParent(transform);
     }
@@ -29,9 +29,9 @@ public class Elevator : MonoBehaviour
     /// <summary>
     /// Unhook player when they leave the elevator
     /// </summary>
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        Transform col = collision.gameObject.transform;
+        Transform col = collision.transform;
         if (col.CompareTag("Player"))
             col.parent = null;
     }
