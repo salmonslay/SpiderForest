@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    [HideInInspector]
-    public int hp;
-
+    [HideInInspector] public int hp;
     private int coins = 0;
     public int maxHP = 3;
-    private Vector3 respawnPosition;
+
+    [HideInInspector] public Vector3 respawnPosition;
 
     private void Start()
     {
