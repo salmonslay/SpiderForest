@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f);
         foreach (Collider2D collider in colliders)
         {
-            if (!collider.CompareTag("Player"))
+            if (!collider.CompareTag("Player") && !collider.isTrigger)
                 return true;
         }
         return false;
