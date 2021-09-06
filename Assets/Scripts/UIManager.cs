@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     public Text Coins;
     public Slider HP;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
     }
