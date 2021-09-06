@@ -9,11 +9,12 @@ public class QuestSign : MonoBehaviour
 
     private void Start()
     {
-        textAnimator.transform.localScale = Vector3.zero;
+        textAnimator.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        textAnimator.gameObject.SetActive(true);
         textAnimator.Play("quest_popUp", 0, 0);
     }
 
