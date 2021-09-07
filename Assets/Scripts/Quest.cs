@@ -25,17 +25,6 @@ public class Quest : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Checks if this quest is completed
-    /// </summary>
-    public bool IsComplete
-    {
-        get
-        {
-            return CurrentAmount >= NeededAmount;
-        }
-    }
-
     private void Start()
     {
         Quests.Add(this);
@@ -62,5 +51,15 @@ public class Quest : MonoBehaviour
     {
         Quest quest = Get(ID);
         if (quest) quest.CurrentAmount += amount;
+    }
+
+    /// <summary>
+    /// Checks if a quest is completed
+    /// </summary>
+    public static bool IsComplete(string ID)
+    {
+        Quest quest = Get(ID);
+        if (quest) return quest.CurrentAmount >= quest.NeededAmount;
+        return false;
     }
 }
