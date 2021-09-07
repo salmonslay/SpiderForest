@@ -56,5 +56,6 @@ public class PlayerState : MonoBehaviour
     public void PickCoin(int amount = 1)
     {
         coins += amount;
+        Quest.Increase("collect_coins", amount);
     }
 }
