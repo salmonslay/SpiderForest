@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ba91dc52f64344ba313ff4c5df48c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpForce: 6
+  speed: 7
+  jumpForce: 8
   groundCheck: {fileID: 2241870364422326606}
 --- !u!114 &2241870362616591359
 MonoBehaviour:
@@ -117,7 +117,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   maxHP: 3
-  respawnPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &2241870362616591346
 Rigidbody2D:
   serializedVersion: 4
