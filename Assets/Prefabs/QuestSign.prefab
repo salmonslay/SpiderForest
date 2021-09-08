@@ -58,7 +58,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &8559018957871388110
 MonoBehaviour:
@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 8559018958170549264}
   - component: {fileID: 8559018958170549267}
   - component: {fileID: 8559018958170549271}
+  - component: {fileID: 40556645189275656}
   m_Layer: 0
   m_Name: QuestSign
   m_TagString: Untagged
@@ -126,7 +127,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8559018958170549270}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.649124, y: 2.4783905, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -223,7 +224,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f629f0cc00869c45995812d356892b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textAnimator: {fileID: 8559018959881081736}
+  textObj: {fileID: 8559018959881081732}
+  quest: {fileID: 40556645189275656}
+--- !u!114 &40556645189275656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559018958170549270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b712f2ff2ba544b95fc42462bf3e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: collect_coins
+  NeededAmount: 5
+  CurrentAmount: 0
+  _questDescription: Collect @ coins
+  _completionDescription: Nice
 --- !u!1 &8559018959881081732
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +271,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8559018959881081732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8559018957871388108}
