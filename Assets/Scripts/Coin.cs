@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
@@ -7,9 +8,16 @@ public class Coin : MonoBehaviour
     /// </summary>
     public static int PickedUp = 0;
 
-    private void Start()
+    /// <summary>
+    /// Last time user picked up a coin
+    /// </summary>
+    private static DateTime LastPickup = DateTime.MinValue;
+
+    private void Update()
     {
-        PickedUp = 0;
+        //Reset pitch if user has not picked up coins for 3 seconds
+        if ((DateTime.Now - LastPickup).TotalSeconds > 3)
+            PickedUp = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,7 +27,9 @@ public class Coin : MonoBehaviour
             //play audio
             GetComponent<AudioSource>().pitch = 1 + ((float)PickedUp++ / 30);
             GetComponent<AudioSource>().Play();
+            LastPickup = DateTime.Now;
 
+            //add coins
             collision.GetComponent<PlayerState>().PickCoin(1);
 
             //destroy coin
