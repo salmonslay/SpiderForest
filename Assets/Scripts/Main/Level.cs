@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Level", menuName = "platform!/Level", order = 1)]
 [Serializable]
@@ -16,5 +15,5 @@ public class Level : ScriptableObject
     public string levelDescription;
 
     [Tooltip("Level icon shown in menu")]
-    public Image levelIcon;
+    public Sprite levelIcon;
 }
