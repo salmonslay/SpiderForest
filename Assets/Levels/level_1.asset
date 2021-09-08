@@ -15,4 +15,4 @@ MonoBehaviour:
   ID: level_1
   levelName: Level 1
   levelDescription: This is as basic as it gets.
-  levelIcon: {fileID: 0}
+  levelIcon: {fileID: 21300000, guid: 219990257ccc5864f8c16c1338a18a39, type: 3}
