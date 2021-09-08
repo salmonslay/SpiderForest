@@ -28,5 +28,7 @@ public class QuestSign : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         textObj.GetComponent<Animator>().Play("quest_popOut", 0, 0);
+
+        Destroy(gameObject, 1);
     }
 }
