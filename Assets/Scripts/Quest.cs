@@ -18,10 +18,18 @@ public class Quest : MonoBehaviour
     {
         get
         {
-            if (CurrentAmount >= NeededAmount)
+            if (IsComplete)
                 return _completionDescription;
             else
                 return _questDescription.Replace("@", $"{CurrentAmount}/{NeededAmount}");
+        }
+    }
+
+    public bool IsComplete
+    {
+        get
+        {
+            return CurrentAmount >= NeededAmount;
         }
     }
 
@@ -29,6 +37,17 @@ public class Quest : MonoBehaviour
     {
         Quests.Add(this);
     }
+
+    /// <summary>
+    /// Increase this quest objective
+    /// </summary>
+    /// <param name="amount">Amount to increase objective by</param>
+    public void Increase(float amount = 1.0f)
+    {
+        CurrentAmount += amount;
+    }
+
+    #region static methods
 
     /// <summary>
     /// Search for quest by ID
@@ -50,16 +69,8 @@ public class Quest : MonoBehaviour
     public static void Increase(string ID, float amount = 1.0f)
     {
         Quest quest = Get(ID);
-        if (quest) quest.CurrentAmount += amount;
+        if (quest) quest.Increase(amount);
     }
 
-    /// <summary>
-    /// Checks if a quest is completed
-    /// </summary>
-    public static bool IsComplete(string ID)
-    {
-        Quest quest = Get(ID);
-        if (quest) return quest.CurrentAmount >= quest.NeededAmount;
-        return false;
-    }
+    #endregion static methods
 }
