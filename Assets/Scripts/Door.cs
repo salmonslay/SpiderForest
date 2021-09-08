@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
+    public string sceneID;
     public Quest questCondition;
     public GameObject openState;
     public GameObject closedState;
@@ -11,6 +13,9 @@ public class Door : MonoBehaviour
     {
         if (isOpen)
         {
+            //maybe play some cutscene?
+
+            SceneManager.LoadScene(sceneID);
         }
     }
 
