@@ -11,8 +11,10 @@ public class BeatPulse : MonoBehaviour
     private void Update()
     {
         var baseValue = Mathf.Cos(Time.time * Mathf.PI * (BPM / 60f) % Mathf.PI);
+        transform.localScale = Vector3.Lerp(new Vector3(1f, 1f, 1), new Vector3(size, size, 1), baseValue);
+        GetComponent<Image>().color = Color.Lerp(Color.white, logoColor, baseValue);
+
+        //spin rays
         ray.transform.Rotate(0, 0, 30 * Time.deltaTime);
-        this.transform.localScale = Vector3.Lerp(new Vector3(1f, 1f, 1), new Vector3(size, size, 1), baseValue);
-        this.GetComponent<Image>().color = Color.Lerp(Color.white, logoColor, baseValue);
     }
 }
