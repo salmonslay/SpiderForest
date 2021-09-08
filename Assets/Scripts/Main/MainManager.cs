@@ -47,5 +47,6 @@ public class MainManager : MonoBehaviour
     {
         Levels, // 0
         Settings // 1
+
     }
 }
