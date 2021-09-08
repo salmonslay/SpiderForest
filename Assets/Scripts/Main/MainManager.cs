@@ -9,7 +9,12 @@ public class MainManager : MonoBehaviour
 
     private Menu activeMenu = Menu.Levels;
 
-    public void SetMenu(Menu newMenu)
+    public void SetMenu(int id)
+    {
+        SetMenu((Menu)id);
+    }
+
+    private void SetMenu(Menu newMenu)
     {
         //only do stuff if menu changes
         if (activeMenu == newMenu) return;
@@ -40,7 +45,7 @@ public class MainManager : MonoBehaviour
 
     public enum Menu
     {
-        Levels,
-        Settings
+        Levels, // 0
+        Settings // 1
     }
 }
