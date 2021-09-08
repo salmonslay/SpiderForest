@@ -5,8 +5,21 @@ public class PlayerState : MonoBehaviour
     [HideInInspector] public int hp;
     private int coins = 0;
     public int maxHP = 3;
+    private Vector3 _respawnPosition;
 
-    [HideInInspector] public Vector3 respawnPosition;
+    [HideInInspector]
+    public Vector3 respawnPosition
+    {
+        set
+        {
+            value.z = -1;
+            _respawnPosition = value;
+        }
+        get
+        {
+            return _respawnPosition;
+        }
+    }
 
     private void Start()
     {
