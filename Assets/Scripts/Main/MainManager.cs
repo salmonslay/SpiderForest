@@ -39,7 +39,6 @@ public class MainManager : MonoBehaviour
         else
         {
             activeObject.GetComponent<Animator>().Play("mainMenu_panelClose", 0, 0);
-            //  activeObject.SetActive(false);
         }
 
         //open the right menu
