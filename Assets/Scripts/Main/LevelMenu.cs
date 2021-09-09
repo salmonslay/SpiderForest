@@ -21,7 +21,6 @@ public class LevelMenu : MonoBehaviour
             level.levelIcon.sprite = levels[i].levelIcon;
 
             obj.transform.SetParent(scrollView.transform, false);
-            obj.transform.localPosition = new Vector3(0, i * -110);
         }
         rect.sizeDelta = new Vector2(rect.sizeDelta.x, levels.Count * 110 + 100);
     }
