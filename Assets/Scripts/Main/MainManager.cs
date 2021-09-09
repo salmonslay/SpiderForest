@@ -4,6 +4,7 @@ public class MainManager : MonoBehaviour
 {
     [Header("Menus")] [SerializeField] private GameObject levelMenu;
     [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject creditsMenu;
 
     [SerializeField] private AudioClip select;
 
@@ -19,10 +20,11 @@ public class MainManager : MonoBehaviour
         //only do stuff if menu changes
         if (activeMenu == newMenu) return;
 
-        activeMenu = newMenu;
 
         //toggle the right menu
+        activeMenu = newMenu;
         levelMenu.SetActive(false);
+        settingsMenu.SetActive(false);
         settingsMenu.SetActive(false);
         switch (newMenu)
         {
@@ -33,8 +35,13 @@ public class MainManager : MonoBehaviour
             case Menu.Settings:
                 settingsMenu.SetActive(true);
                 break;
+
+            case Menu.Credits:
+                creditsMenu.SetActive(true);
+                break;
         }
 
+        //play sfx
         Helper.PlayAudio(select);
     }
 
@@ -46,7 +53,7 @@ public class MainManager : MonoBehaviour
     public enum Menu
     {
         Levels, // 0
-        Settings // 1
-
+        Settings, // 1
+        Credits // 2
     }
 }
