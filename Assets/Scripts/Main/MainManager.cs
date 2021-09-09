@@ -5,6 +5,7 @@ public class MainManager : MonoBehaviour
     [Header("Menus")] [SerializeField] private GameObject levelMenu;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject creditsMenu;
+    private GameObject activeObject;
 
     [SerializeField] private AudioClip select;
 
@@ -21,24 +22,10 @@ public class MainManager : MonoBehaviour
         if (activeMenu == newMenu) return;
 
         //toggle the right menu
+        if (activeObject) activeObject.SetActive(false);
         activeMenu = newMenu;
-        levelMenu.SetActive(false);
-        creditsMenu.SetActive(false);
-        optionsMenu.SetActive(false);
-        switch (newMenu)
-        {
-            case Menu.Levels:
-                levelMenu.SetActive(true);
-                break;
-
-            case Menu.Options:
-                optionsMenu.SetActive(true);
-                break;
-
-            case Menu.Credits:
-                creditsMenu.SetActive(true);
-                break;
-        }
+        activeObject = GetMenu(newMenu);
+        activeObject.SetActive(true);
 
         //play sfx
         Helper.PlayAudio(select);
@@ -55,5 +42,23 @@ public class MainManager : MonoBehaviour
         Levels, // 1
         Options, // 2
         Credits // 3
+    }
+
+    private GameObject GetMenu(Menu menu)
+    {
+        switch (menu)
+        {
+            case Menu.Levels:
+                return levelMenu;
+
+            case Menu.Options:
+                return optionsMenu;
+
+            case Menu.Credits:
+                return creditsMenu;
+
+            default:
+                return null;
+        }
     }
 }
