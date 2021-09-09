@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
+    [SerializeField] private Animator mainContainer;
+
     [Header("Menus")] [SerializeField] private GameObject levelMenu;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject creditsMenu;
@@ -21,8 +23,17 @@ public class MainManager : MonoBehaviour
         //only do stuff if menu changes
         if (activeMenu == newMenu) return;
 
-        //toggle the right menu
-        if (activeObject) activeObject.SetActive(false);
+        //play first time animation
+        if (activeMenu == Menu.None)
+        {
+            mainContainer.Play("mainMenu_moveLeft");
+        }
+        else
+        {
+            activeObject.SetActive(false);
+        }
+
+        //open the right menu
         activeMenu = newMenu;
         activeObject = GetMenu(newMenu);
         activeObject.SetActive(true);
