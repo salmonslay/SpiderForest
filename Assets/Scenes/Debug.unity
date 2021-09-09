@@ -25686,28 +25686,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8559018958170549265, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
   m_PrefabInstance: {fileID: 8527469587810171920}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &40556645189275654 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8559018958170549270, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
+--- !u!114 &40556645189275655 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 40556645189275656, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
   m_PrefabInstance: {fileID: 8527469587810171920}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &40556645189275656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40556645189275654}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10b712f2ff2ba544b95fc42462bf3e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: collect_coins
-  NeededAmount: 5
-  CurrentAmount: 0
-  _questDescription: Collect @ coins
-  _completionDescription: Nice
 --- !u!1001 &107182966449534676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25880,7 +25869,7 @@ PrefabInstance:
     - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
       propertyPath: questCondition
       value: 
-      objectReference: {fileID: 40556645189275656}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
 --- !u!1001 &2241870363944110438
@@ -26239,7 +26228,7 @@ PrefabInstance:
     - target: {fileID: 8559018958170549271, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
       propertyPath: quest
       value: 
-      objectReference: {fileID: 40556645189275656}
+      objectReference: {fileID: 40556645189275655}
     - target: {fileID: 8559018958170549271, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
       propertyPath: textObj
       value: 
