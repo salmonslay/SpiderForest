@@ -10,6 +10,7 @@ public class MainManager : MonoBehaviour
     private GameObject activeObject;
 
     [SerializeField] private AudioClip select;
+    [SerializeField] private AudioClip back;
 
     private Menu activeMenu = Menu.None;
 
@@ -20,8 +21,15 @@ public class MainManager : MonoBehaviour
 
     private void SetMenu(Menu newMenu)
     {
-        //only do stuff if menu changes
-        if (activeMenu == newMenu) return;
+        //close menu if user double clicks
+        if (activeMenu == newMenu)
+        {
+            activeMenu = Menu.None;
+            activeObject.GetComponent<Animator>().Play("mainMenu_panelClose", 0, 0);
+            mainContainer.Play("mainMenu_moveRight");
+            Helper.PlayAudio(back);
+            return;
+        }
 
         //play first time animation
         if (activeMenu == Menu.None)
@@ -30,13 +38,15 @@ public class MainManager : MonoBehaviour
         }
         else
         {
-            activeObject.SetActive(false);
+            activeObject.GetComponent<Animator>().Play("mainMenu_panelClose", 0, 0);
+            //  activeObject.SetActive(false);
         }
 
         //open the right menu
         activeMenu = newMenu;
         activeObject = GetMenu(newMenu);
         activeObject.SetActive(true);
+        activeObject.GetComponent<Animator>().Play("mainMenu_panelOpen", 0, 0);
 
         //play sfx
         Helper.PlayAudio(select);
