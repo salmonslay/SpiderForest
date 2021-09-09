@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
         //Move character
         Vector3 moveBy = new Vector3(horizontal, 0, 0);
         transform.Translate(moveBy * Time.fixedDeltaTime * speed);
+        Statistics.Increase(Statistics.Keys.MetersRan, Mathf.Abs(horizontal * Time.fixedDeltaTime * speed));
+
 
         //Flip character
         if (horizontal > 0.2f)
@@ -73,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
     public void Jump()
     {
         body.AddForce(new Vector2(0, jumpForce * 100));
+        Statistics.Increase(Statistics.Keys.Jumps, 1);
         animator.SetTrigger("Jump");
     }
 }

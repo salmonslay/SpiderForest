@@ -6,6 +6,7 @@ public class MainManager : MonoBehaviour
 
     [Header("Menus")] [SerializeField] private GameObject levelMenu;
     [SerializeField] private GameObject optionsMenu;
+    [SerializeField] private GameObject statsMenu;
     [SerializeField] private GameObject creditsMenu;
     private GameObject activeObject;
 
@@ -61,7 +62,8 @@ public class MainManager : MonoBehaviour
         None, // 0
         Levels, // 1
         Options, // 2
-        Credits // 3
+        Credits, // 3
+        Stats // 4
     }
 
     private GameObject GetMenu(Menu menu)
@@ -76,6 +78,8 @@ public class MainManager : MonoBehaviour
 
             case Menu.Credits:
                 return creditsMenu;
+            case Menu.Stats:
+                return statsMenu;
 
             default:
                 return null;

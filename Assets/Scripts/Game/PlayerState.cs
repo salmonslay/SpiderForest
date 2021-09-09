@@ -70,5 +70,7 @@ public class PlayerState : MonoBehaviour
     {
         coins += amount;
         Quest.Increase("collect_coins", amount);
+        Statistics.Increase(Statistics.Keys.Coins, amount);
+
     }
 }
