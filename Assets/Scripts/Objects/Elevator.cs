@@ -6,6 +6,15 @@ public class Elevator : MonoBehaviour
     private int targetIndex = 0;
     public float speed = 5f;
 
+    private void Start()
+    {
+        // change all node positions to Z=0 to prevent hidden delays
+        for (int i = 0; i < nodes.Length; i++)
+        {
+            nodes[i].localPosition = new Vector3(nodes[i].localPosition.x, nodes[i].localPosition.y, 0);
+        }
+    }
+
     private void FixedUpdate()
     {
         Vector3 target = nodes[targetIndex].position;
