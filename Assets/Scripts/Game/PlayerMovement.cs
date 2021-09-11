@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 3f;
+    public float speedModifier = 1f;
     public float jumpForce = 2.5f;
     private float horizontal = 0f;
 
@@ -35,9 +36,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //Move character
         Vector3 moveBy = new Vector3(horizontal, 0, 0);
-        transform.Translate(moveBy * Time.fixedDeltaTime * speed);
-        Statistics.Increase(Statistics.Keys.MetersRan, Mathf.Abs(horizontal * Time.fixedDeltaTime * speed));
-
+        transform.Translate(moveBy * Time.fixedDeltaTime * speed * speedModifier);
+        Statistics.Increase(Statistics.Keys.MetersRan, Mathf.Abs(horizontal * Time.fixedDeltaTime * speed * speedModifier));
 
         //Flip character
         if (horizontal > 0.2f)
