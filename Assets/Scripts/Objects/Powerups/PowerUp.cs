@@ -11,12 +11,7 @@ public class PowerUp : MonoBehaviour, IPowerUp
     /// <summary>
     /// Icon shown in UI and in-game
     /// </summary>
-    private Sprite Icon;
-
-    /// <summary>
-    /// Color for this power ups particles
-    /// </summary>
-    public Color ParticleColor;
+    private Sprite icon;
 
     /// <summary>
     /// Duration for this power up to run
@@ -28,9 +23,15 @@ public class PowerUp : MonoBehaviour, IPowerUp
     /// </summary>
     private Vector3 pos;
 
+    private ParticleSystem.EmissionModule particleEmission;
+    private ParticleSystem.MainModule particleMain;
+
     private void Start()
     {
-        Icon = GetComponent<SpriteRenderer>().sprite;
+        icon = GetComponent<SpriteRenderer>().sprite;
+        particleMain = GetComponent<ParticleSystem>().main;
+        particleEmission = GetComponent<ParticleSystem>().emission;
+
         pos = transform.position;
     }
 
@@ -51,11 +52,15 @@ public class PowerUp : MonoBehaviour, IPowerUp
     {
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<SpriteRenderer>());
+        particleMain.startSpeedMultiplier *= 5;
+        particleMain.startLifetime = 1;
+        particleEmission.rateOverTime = 1000;
 
-        // todo: add icon to UI
+        yield return new WaitForSeconds(0.1f);
+        particleEmission.rateOverTime = 0;
 
         //wait for powerup to end
-        yield return new WaitForSeconds(Duration);
+        yield return new WaitForSeconds(Duration - 0.1f);
 
         // todo: remove from UI
     }
