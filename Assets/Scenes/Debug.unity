@@ -25984,6 +25984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elevator
       objectReference: {fileID: 0}
+    - target: {fileID: 2434802889652584915, guid: 2c1ff0cfa172b2a4ba11428f3b6b862e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1ff0cfa172b2a4ba11428f3b6b862e, type: 3}
 --- !u!1001 &3014763736418616600
