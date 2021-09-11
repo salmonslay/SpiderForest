@@ -23,14 +23,20 @@ public class PowerUp : MonoBehaviour, IPowerUp
     /// </summary>
     public float Duration;
 
+    /// <summary>
+    /// Position this item originally spawned at
+    /// </summary>
+    private Vector3 pos;
+
     private void Start()
     {
         Icon = GetComponent<SpriteRenderer>().sprite;
+        pos = transform.position;
     }
 
     private void Update()
     {
-        //add some bouncing effect
+        transform.position = new Vector3(pos.x, Mathf.Sin(Time.time) * 0.25f + pos.y, pos.z);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
