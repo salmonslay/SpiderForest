@@ -575,7 +575,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
-  Duration: 5
+  Duration: 10
+  sfx: {fileID: 8300000, guid: 50568358de15e6949be3adcda2743bd2, type: 3}
 --- !u!212 &762604034
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -816,7 +817,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.11
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2

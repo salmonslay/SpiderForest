@@ -19,6 +19,11 @@ public class PowerUp : MonoBehaviour, IPowerUp
     public float Duration;
 
     /// <summary>
+    /// Audio clip to play at pickup
+    /// </summary>
+    [SerializeField] private AudioClip sfx;
+
+    /// <summary>
     /// Position this item originally spawned at
     /// </summary>
     private Vector3 pos;
@@ -50,6 +55,7 @@ public class PowerUp : MonoBehaviour, IPowerUp
 
     public virtual IEnumerator Activate(Collider2D collision)
     {
+        Helper.PlayAudio(sfx);
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<SpriteRenderer>());
         particleMain.startSpeedMultiplier *= 5;
