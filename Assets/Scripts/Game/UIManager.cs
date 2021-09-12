@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    /// <summary>
+    /// Public instance of the UI manager, allowing other scripts to access it easily.
+    /// </summary>
     [HideInInspector]
     public static UIManager Instance;
 
