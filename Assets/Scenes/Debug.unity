@@ -574,9 +574,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be66ecd541404147b1726cd6552bc3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Speedy Raspberry
   Duration: 10
-  sfx: {fileID: 8300000, guid: 50568358de15e6949be3adcda2743bd2, type: 3}
+  powerup: {fileID: 8300000, guid: 50568358de15e6949be3adcda2743bd2, type: 3}
+  powerdown: {fileID: 8300000, guid: 97096932096ac4a4baf7d9d41ed7241e, type: 3}
 --- !u!212 &762604034
 SpriteRenderer:
   m_ObjectHideFlags: 0

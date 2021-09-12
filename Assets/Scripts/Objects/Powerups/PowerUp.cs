@@ -18,10 +18,8 @@ public class PowerUp : MonoBehaviour, IPowerUp
     /// </summary>
     public float Duration;
 
-    /// <summary>
-    /// Audio clip to play at pickup
-    /// </summary>
-    [SerializeField] private AudioClip sfx;
+    [SerializeField] private AudioClip powerup;
+    [SerializeField] private AudioClip powerdown;
 
     /// <summary>
     /// Position this item originally spawned at
@@ -56,9 +54,10 @@ public class PowerUp : MonoBehaviour, IPowerUp
     public virtual IEnumerator Activate(Collider2D collision)
     {
         // pick up power up
-        Helper.PlayAudio(sfx);
+        Helper.PlayAudio(powerup);
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<SpriteRenderer>());
+        StartCoroutine(Deactivate(collision));
 
         // add to UI
         StartCoroutine(UIManager.Instance.AddPower(icon, Duration));
@@ -69,5 +68,11 @@ public class PowerUp : MonoBehaviour, IPowerUp
         particleEmission.rateOverTime = 1000;
         yield return new WaitForSeconds(0.1f);
         particleEmission.rateOverTime = 0;
+    }
+
+    public virtual IEnumerator Deactivate(Collider2D collision)
+    {
+        yield return new WaitForSeconds(Duration);
+        Helper.PlayAudio(powerdown);
     }
 }
