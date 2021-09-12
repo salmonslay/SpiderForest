@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Adds all levels to the scroll view in the main menu at start
+/// </summary>
 public class LevelMenu : MonoBehaviour
 {
     [SerializeField] private GameObject scrollView;

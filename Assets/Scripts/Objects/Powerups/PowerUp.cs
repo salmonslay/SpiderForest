@@ -1,10 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Base class for all power ups in the game.
+/// </summary>
 public class PowerUp : MonoBehaviour, IPowerUp
 {
     /// <summary>
     /// A name for this power up
+    /// (currently not used anywhere though)
     /// </summary>
     [SerializeField] public string Name;
 

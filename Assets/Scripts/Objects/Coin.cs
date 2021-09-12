@@ -5,6 +5,7 @@ public class Coin : MonoBehaviour
 {
     /// <summary>
     /// Total coins picked up during this level
+    /// Used for climbing audio pitch
     /// </summary>
     public static int PickedUp = 0;
 

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Controls the main menu and its panels
+/// </summary>
 public class MainManager : MonoBehaviour
 {
     [SerializeField] private Animator mainContainer;
@@ -15,6 +18,9 @@ public class MainManager : MonoBehaviour
 
     private Menu activeMenu = Menu.None;
 
+    /// <summary>
+    /// Converts an int to a MainManager.Menu and opens this menu
+    /// </summary>
     public void SetMenu(int id)
     {
         SetMenu((Menu)id);

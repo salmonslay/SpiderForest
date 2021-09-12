@@ -8,12 +8,12 @@ public class Level : ScriptableObject
     [Tooltip("ID used to load this level")]
     public string ID;
 
-    [Tooltip("Level name shown in menu")]
+    [Tooltip("Level name shown in main menu")]
     public string levelName;
 
-    [Tooltip("Level description shown in menu")]
+    [Tooltip("Level description shown in main menu")]
     public string levelDescription;
 
-    [Tooltip("Level icon shown in menu")]
+    [Tooltip("Level icon shown in main menu")]
     public Sprite levelIcon;
 }
