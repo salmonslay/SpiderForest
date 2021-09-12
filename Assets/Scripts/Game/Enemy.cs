@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.2f);
         foreach (Collider2D collider in colliders)
         {
-            if (collider.gameObject != gameObject) return true;
+            if (collider.gameObject != gameObject && !collider.isTrigger) return true;
         }
         return false;
     }
