@@ -30,14 +30,11 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetBool("IsGrounded", isGrounded);
         animator.SetFloat("Velocity", Mathf.Abs(horizontal));
-    }
 
-    private void FixedUpdate()
-    {
         //Move character
         Vector3 moveBy = new Vector3(horizontal, 0, 0);
-        transform.Translate(moveBy * Time.fixedDeltaTime * speed * speedModifier);
-        Statistics.Increase(Statistics.Keys.MetersRan, Mathf.Abs(horizontal * Time.fixedDeltaTime * speed * speedModifier));
+        transform.Translate(moveBy * Time.deltaTime * speed * speedModifier);
+        Statistics.Increase(Statistics.Keys.MetersRan, Mathf.Abs(horizontal * Time.deltaTime * speed * speedModifier));
 
         //Flip character
         if (horizontal > 0.2f)

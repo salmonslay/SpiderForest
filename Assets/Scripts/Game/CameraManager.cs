@@ -11,7 +11,7 @@ public class CameraManager : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         Vector3 desiredPosition = target.position + offset;
         float speed = smoothSpeed * Time.deltaTime;
