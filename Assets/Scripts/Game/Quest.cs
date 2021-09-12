@@ -35,6 +35,7 @@ public class Quest : MonoBehaviour
 
     private void Start()
     {
+        Quests.Clear();
         Quests.Add(this);
     }
 
