@@ -206,6 +206,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8976989642378970198, guid: 7b6ca56eac5f84345837a05d4c049ed5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976989642378970198, guid: 7b6ca56eac5f84345837a05d4c049ed5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976989642378970198, guid: 7b6ca56eac5f84345837a05d4c049ed5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976989642378970198, guid: 7b6ca56eac5f84345837a05d4c049ed5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976989642575199993, guid: 7b6ca56eac5f84345837a05d4c049ed5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976989642575199993, guid: 7b6ca56eac5f84345837a05d4c049ed5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976989642575199993, guid: 7b6ca56eac5f84345837a05d4c049ed5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8976989642575199993, guid: 7b6ca56eac5f84345837a05d4c049ed5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8976989642599781235, guid: 7b6ca56eac5f84345837a05d4c049ed5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -25251,8 +25283,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
+      propertyPath: sceneID
+      value: Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
       propertyPath: questCondition
       value: 
+      objectReference: {fileID: 40556645189275655}
+    - target: {fileID: 2180980545421571743, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
