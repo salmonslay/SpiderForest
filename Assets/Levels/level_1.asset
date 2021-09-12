@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01538468ba9209445bdebb7001e68a38, type: 3}
   m_Name: level_1
   m_EditorClassIdentifier: 
-  ID: Debug
+  ID: level_1
   levelName: Level 1
   levelDescription: This is as basic as it gets.
   levelIcon: {fileID: 21300000, guid: 219990257ccc5864f8c16c1338a18a39, type: 3}
