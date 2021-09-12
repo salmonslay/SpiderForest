@@ -55,19 +55,19 @@ public class PowerUp : MonoBehaviour, IPowerUp
 
     public virtual IEnumerator Activate(Collider2D collision)
     {
+        // pick up power up
         Helper.PlayAudio(sfx);
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<SpriteRenderer>());
+
+        // add to UI
+        StartCoroutine(UIManager.Instance.AddPower(icon, Duration));
+
+        // play particle burst
         particleMain.startSpeedMultiplier *= 5;
         particleMain.startLifetime = 1;
         particleEmission.rateOverTime = 1000;
-
         yield return new WaitForSeconds(0.1f);
         particleEmission.rateOverTime = 0;
-
-        //wait for powerup to end
-        yield return new WaitForSeconds(Duration - 0.1f);
-
-        // todo: remove from UI
     }
 }
