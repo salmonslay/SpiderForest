@@ -7,6 +7,9 @@ public class EnemyMoving : Enemy
 {
     [SerializeField] private float speed = 5f;
 
+    [Tooltip("Whether or not this enemy should care if it touches the ground or not. Unchecking this will result in flying enemies.")]
+    [SerializeField] private bool useGround = true;
+
     [Tooltip("Empty GameObject in front of enemy that decides if it's touching the ground or not.")]
     public Transform groundCheck;
 
@@ -30,7 +33,7 @@ public class EnemyMoving : Enemy
             moveBy.x = speed * Time.deltaTime * movementDirection;
             transform.Translate(moveBy);
 
-            if (!isGrounded) SwapDirection();
+            if (!isGrounded && useGround) SwapDirection();
         }
     }
 
