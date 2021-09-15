@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     /// <returns></returns>
     public bool IsFalling()
     {
-        return body.velocity.y < -1;
+        return body.velocity.y < -0.2;
     }
 
     /// <summary>
