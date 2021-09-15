@@ -16,13 +16,14 @@ public class EnemyMoving : Enemy
 
     private Animator animator;
     private bool isGrounded = true;
-
-    [Tooltip("Optional hitbox this enemy will use for getting killed.")]
-    [SerializeField] private EnemyHitbox hitbox;
+    private EnemyHitbox hitbox;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+        //set hitbox
+        hitbox = GetComponentInChildren<EnemyHitbox>();
         if (hitbox)
             hitbox.enemy = this;
     }
