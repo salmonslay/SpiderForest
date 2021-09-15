@@ -18,8 +18,9 @@ public class EnemyMoving : Enemy
     private bool isGrounded = true;
     private EnemyHitbox hitbox;
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         animator = GetComponent<Animator>();
 
         //set hitbox

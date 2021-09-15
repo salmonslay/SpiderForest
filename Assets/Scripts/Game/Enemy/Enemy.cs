@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     public int damage;
 
-    private void Start()
+    public virtual void Start()
     {
         body = GetComponent<Rigidbody2D>();
     }
