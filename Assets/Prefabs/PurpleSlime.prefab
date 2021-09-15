@@ -271,6 +271,6 @@ MonoBehaviour:
   body: {fileID: 0}
   movementDirection: 1
   damage: 1
-  speed: 5
+  speed: 2
   useGround: 1
   groundCheck: {fileID: 107182966891828696}
