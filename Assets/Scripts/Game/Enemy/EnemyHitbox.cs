@@ -1,8 +1,11 @@
 using UnityEngine;
 
-public class EnemyKilling : MonoBehaviour
+public class EnemyHitbox : MonoBehaviour
 {
-    public Enemy enemy;
+    /// <summary>
+    /// This enemy is set from its parent
+    /// </summary>
+    [HideInInspector] public Enemy enemy;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {

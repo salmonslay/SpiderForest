@@ -5,6 +5,7 @@ using UnityEngine;
 /// </summary>
 public class EnemyMoving : Enemy
 {
+    [Tooltip("Speed multiplier this enemy will move by")]
     [SerializeField] private float speed = 5f;
 
     [Tooltip("Whether or not this enemy should care if it touches the ground or not. Unchecking this will result in flying enemies.")]
@@ -16,9 +17,14 @@ public class EnemyMoving : Enemy
     private Animator animator;
     private bool isGrounded = true;
 
+    [Tooltip("Optional hitbox this enemy will use for getting killed.")]
+    [SerializeField] private EnemyHitbox hitbox;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
+        if (hitbox)
+            hitbox.enemy = this;
     }
 
     private void Update()
