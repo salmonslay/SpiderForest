@@ -2,12 +2,7 @@ using UnityEngine;
 
 public class EnemyKilling : MonoBehaviour
 {
-    private Enemy enemy;
-
-    private void Start()
-    {
-        enemy = GetComponentInParent<Enemy>();
-    }
+    public Enemy enemy;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {

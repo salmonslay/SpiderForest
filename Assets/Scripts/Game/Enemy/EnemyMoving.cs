@@ -52,4 +52,17 @@ public class EnemyMoving : Enemy
         movementDirection *= -1;
         transform.localScale = new Vector3(movementDirection, 1f);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // always swap direction when enemy hits something
+        SwapDirection();
+
+        // if enemy hits a player - do harm
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerState state = collision.gameObject.GetComponent<PlayerState>();
+            state.Harm(damage);
+        }
+    }
 }
