@@ -15,18 +15,30 @@ public class EnemyMoving : Enemy
     public Transform groundCheck;
 
     private Animator animator;
+    private BoxCollider2D enemyCollider;
     private bool isGrounded = true;
     private EnemyHitbox hitbox;
 
     public override void Start()
     {
+        //run Start() on base class
         base.Start();
+
+        //get components
         animator = GetComponent<Animator>();
+        enemyCollider = GetComponent<BoxCollider2D>();
 
         //set hitbox
         hitbox = GetComponentInChildren<EnemyHitbox>();
         if (hitbox)
             hitbox.enemy = this;
+
+        //add trigger collider automatically to detect walls
+        //this collider is 5% wider and 50% shorter than the original collider
+        BoxCollider2D col = gameObject.AddComponent<BoxCollider2D>();
+        col.size = new Vector2(enemyCollider.size.x * 1.05f, enemyCollider.size.y / 2f);
+        col.offset = enemyCollider.offset;
+        col.isTrigger = true;
     }
 
     private void Update()
@@ -69,14 +81,17 @@ public class EnemyMoving : Enemy
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // always swap direction when enemy hits something
-        SwapDirection();
-
         // if enemy hits a player - do harm
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerState state = collision.gameObject.GetComponent<PlayerState>();
             state.Harm(damage);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // swap direction when enemy enters a trigger
+        SwapDirection();
     }
 }
