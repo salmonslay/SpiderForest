@@ -6,7 +6,10 @@ using UnityEngine;
 public class EnemyMoving : Enemy
 {
     [SerializeField] private float speed = 5f;
+
+    [Tooltip("Empty GameObject in front of enemy that decides if it's touching the ground or not.")]
     public Transform groundCheck;
+
     private Animator animator;
     private bool isGrounded = true;
 
