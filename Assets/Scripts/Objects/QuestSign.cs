@@ -31,7 +31,7 @@ public class QuestSign : MonoBehaviour
     private void Update()
     {
         exclamationMark.position = new Vector3(exclamationMarkPos.x, Mathf.Sin(Time.time) * 0.25f + exclamationMarkPos.y, exclamationMarkPos.z);
-        if (quest.IsComplete) exclamationMark.gameObject.SetActive(false);
+        if (quest.IsCompletedHere) exclamationMark.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,7 +44,7 @@ public class QuestSign : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        exclamationMark.gameObject.SetActive(!quest.IsComplete);
+        exclamationMark.gameObject.SetActive(!quest.IsCompletedHere);
         textObj.GetComponent<Animator>().Play("quest_popOut", 0, 0);
     }
 }
