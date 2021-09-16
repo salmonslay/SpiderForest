@@ -7,14 +7,14 @@ public class Quest : MonoBehaviour
 
     /// <summary>
     /// Unique ID to track if this quest is completed or not.
-    /// For example, if this ID is "UNLOCK_LEVEL_2" it be granted 
-    /// by completing the quest on level 1, and will allow the player 
-    /// to access level 2 once completed. 
+    /// For example, if this ID is "UNLOCK_LEVEL_2" it be granted
+    /// by completing the quest on level 1, and will allow the player
+    /// to access level 2 once completed.
     /// </summary>
     public string ID = "";
 
     /// <summary>
-    /// Key for increasing this quest. 
+    /// Key for increasing this quest.
     /// For example, picking up a coin will increment all quests with the condition "collect_coins".
     /// </summary>
     public string condition = "";
@@ -31,18 +31,32 @@ public class Quest : MonoBehaviour
     {
         get
         {
-            if (IsComplete)
+            if (IsCompletedHere)
                 return _completionDescription;
             else
                 return _questDescription.Replace("@", $"{CurrentAmount}/{NeededAmount}");
         }
     }
 
-    public bool IsComplete
+    /// <summary>
+    /// Checks if this quest have been completed during THIS session / attempt
+    /// </summary>
+    public bool IsCompletedHere
     {
         get
         {
             return CurrentAmount >= NeededAmount;
+        }
+    }
+
+    /// <summary>
+    /// Checks if this quest ever have been completed
+    /// </summary>
+    public bool IsCompletedOnce
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(ID, 0) == 1;
         }
     }
 
@@ -59,15 +73,26 @@ public class Quest : MonoBehaviour
     public void Increase(float amount = 1.0f)
     {
         CurrentAmount += amount;
+
+        // save global completion 
+        if (IsCompletedHere) SaveCompletion();
+    }
+
+    /// <summary>
+    /// Saves this quest as completed in PlayerPrefs
+    /// </summary>
+    public void SaveCompletion()
+    {
+        PlayerPrefs.SetInt(ID, 1);
     }
 
     #region static methods
 
     /// <summary>
-    /// Search for quest by ID
+    /// Search for quest by condition
     /// </summary>
-    /// <param name="query">Quest ID to search for</param>
-    /// <returns>First quest with matching ID, or null if none is found</returns>
+    /// <param name="query">Quest condition to search for</param>
+    /// <returns>First quest with matching condition, or null if none is found</returns>
     public static Quest Get(string query)
     {
         foreach (Quest q in Quests) if (q.condition == query.ToLower())
@@ -76,9 +101,9 @@ public class Quest : MonoBehaviour
     }
 
     /// <summary>
-    /// Search for quest by ID and increase it if found
+    /// Search for quest by condition and increase it if found
     /// </summary>
-    /// <param name="ID">Quest ID to search for</param>
+    /// <param name="ID">Quest condition to search for</param>
     /// <param name="amount">Amount to increase objective by</param>
     public static void Increase(string condition, float amount = 1.0f)
     {
