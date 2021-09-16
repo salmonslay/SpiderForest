@@ -6,12 +6,9 @@ public class Quest : MonoBehaviour
     public static List<Quest> Quests = new List<Quest>();
 
     /// <summary>
-    /// Unique ID to track if this quest is completed or not.
-    /// For example, if this ID is "UNLOCK_LEVEL_2" it be granted
-    /// by completing the quest on level 1, and will allow the player
-    /// to access level 2 once completed.
+    /// The level this quest will permanently unlock upon completion.
     /// </summary>
-    public string ID = "";
+    public Level levelToUnlock;
 
     /// <summary>
     /// Key for increasing this quest.
@@ -56,7 +53,7 @@ public class Quest : MonoBehaviour
     {
         get
         {
-            return PlayerPrefs.GetInt(ID, 0) == 1;
+            return PlayerPrefs.GetInt(levelToUnlock.CompletionKey, 0) == 1;
         }
     }
 
@@ -83,7 +80,7 @@ public class Quest : MonoBehaviour
     /// </summary>
     public void SaveCompletion()
     {
-        PlayerPrefs.SetInt(ID, 1);
+        PlayerPrefs.SetInt(levelToUnlock.CompletionKey, 1);
     }
 
     #region static methods

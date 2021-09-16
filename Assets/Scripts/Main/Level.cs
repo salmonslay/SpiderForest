@@ -16,4 +16,13 @@ public class Level : ScriptableObject
 
     [Tooltip("Level icon shown in main menu")]
     public Sprite levelIcon;
+
+    [HideInInspector]
+    public string CompletionKey
+    {
+        get
+        {
+            return "COMPLETED_" + ID;
+        }
+    }
 }
