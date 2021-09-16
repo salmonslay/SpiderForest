@@ -329,6 +329,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 40556645189275656, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
+      propertyPath: levelToUnlock
+      value: 
+      objectReference: {fileID: 11400000, guid: cb7c1e2711f6e0f4bb3dd5adaf4bb811, type: 2}
+    - target: {fileID: 40556645189275656, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
       propertyPath: _questDescription
       value: Make sure to collect coins! You will need @
       objectReference: {fileID: 0}
