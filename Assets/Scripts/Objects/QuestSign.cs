@@ -3,14 +3,10 @@ using UnityEngine.UI;
 
 public class QuestSign : MonoBehaviour
 {
-    /// <summary>
-    /// Animator of text to change
-    /// </summary>
+    [Tooltip("Animator of text to change")]
     [SerializeField] private GameObject textObj;
 
-    /// <summary>
-    /// Exclamation mark to hover while quest is not complete
-    /// </summary>
+    [Tooltip("Exclamation mark to hover while quest is not complete")]
     [SerializeField] private Transform exclamationMark;
 
     private Vector3 exclamationMarkPos;

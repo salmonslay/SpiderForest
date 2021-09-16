@@ -5,15 +5,10 @@ public class Quest : MonoBehaviour
 {
     public static List<Quest> Quests = new List<Quest>();
 
-    /// <summary>
-    /// The level this quest will permanently unlock upon completion.
-    /// </summary>
+    [Tooltip("The level this quest will permanently unlock upon completion.")]
     public Level levelToUnlock;
 
-    /// <summary>
-    /// Key for increasing this quest.
-    /// For example, picking up a coin will increment all quests with the condition "collect_coins".
-    /// </summary>
+    [Tooltip("Key for increasing this quest. For example, picking up a coin will increment all quests with the condition \"collect_coins\"")]
     public string condition = "";
 
     public float NeededAmount = 0;
@@ -71,7 +66,7 @@ public class Quest : MonoBehaviour
     {
         CurrentAmount += amount;
 
-        // save global completion 
+        // save global completion
         if (IsCompletedHere) SaveCompletion();
     }
 
