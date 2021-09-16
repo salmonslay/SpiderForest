@@ -25,7 +25,7 @@ public class Level : ScriptableObject
         }
     }
 
-    public bool IsUnlocked
+    public bool Unlocked
     {
         get
         {
