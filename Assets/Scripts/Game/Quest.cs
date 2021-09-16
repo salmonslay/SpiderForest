@@ -6,12 +6,16 @@ public class Quest : MonoBehaviour
     public static List<Quest> Quests = new List<Quest>();
 
     /// <summary>
-    /// Unique ID to track if this quest is completed or not
+    /// Unique ID to track if this quest is completed or not.
+    /// For example, if this ID is "UNLOCK_LEVEL_2" it be granted 
+    /// by completing the quest on level 1, and will allow the player 
+    /// to access level 2 once completed. 
     /// </summary>
     public string ID = "";
 
     /// <summary>
-    /// Key for increasing this quest
+    /// Key for increasing this quest. 
+    /// For example, picking up a coin will increment all quests with the condition "collect_coins".
     /// </summary>
     public string condition = "";
 
