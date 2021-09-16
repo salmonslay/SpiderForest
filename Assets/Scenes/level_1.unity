@@ -317,6 +317,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1131658367}
     m_Modifications:
     - target: {fileID: 40556645189275656, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
+      propertyPath: ID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 40556645189275656, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
+      propertyPath: condition
+      value: collect_coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 40556645189275656, guid: 7fa516bfa5ba98c43891dcf164eaaeea, type: 3}
       propertyPath: NeededAmount
       value: 20
       objectReference: {fileID: 0}

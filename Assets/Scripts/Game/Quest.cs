@@ -5,7 +5,16 @@ public class Quest : MonoBehaviour
 {
     public static List<Quest> Quests = new List<Quest>();
 
+    /// <summary>
+    /// Unique ID to track if this quest is completed or not
+    /// </summary>
     public string ID = "";
+
+    /// <summary>
+    /// Key for increasing this quest
+    /// </summary>
+    public string condition = "";
+
     public float NeededAmount = 0;
     public float CurrentAmount = 0;
     [SerializeField] private string _questDescription = "Collect @ coins";
@@ -57,7 +66,7 @@ public class Quest : MonoBehaviour
     /// <returns>First quest with matching ID, or null if none is found</returns>
     public static Quest Get(string query)
     {
-        foreach (Quest q in Quests) if (q.ID == query.ToLower())
+        foreach (Quest q in Quests) if (q.condition == query.ToLower())
                 return q;
         return null;
     }
@@ -67,9 +76,9 @@ public class Quest : MonoBehaviour
     /// </summary>
     /// <param name="ID">Quest ID to search for</param>
     /// <param name="amount">Amount to increase objective by</param>
-    public static void Increase(string ID, float amount = 1.0f)
+    public static void Increase(string condition, float amount = 1.0f)
     {
-        Quest quest = Get(ID);
+        Quest quest = Get(condition);
         if (quest) quest.Increase(amount);
     }
 
