@@ -24,6 +24,6 @@ public class BeatPulse : MonoBehaviour
         logo.GetComponent<Image>().color = Color.Lerp(Color.white, bpmColor, baseValue);
 
         //spin rays
-        ray.transform.Rotate(0, 0, 30 * Time.deltaTime * (Mathf.Abs(baseValue) + 1));
+        ray.transform.Rotate(0, 0, raySpeed * Time.deltaTime * (Mathf.Abs(baseValue) + 1));
     }
 }

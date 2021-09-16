@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private Animator animator;
 
+    public SpriteRenderer flashlight;
+    public bool isFlashlightOn = false;
+    public Sprite flashlightOn;
+    public Sprite flashlightOff;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -41,6 +46,12 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
         else if (horizontal < -0.2f)
             transform.localScale = new Vector3(-1, 1, 1);
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ToggleFlashlight();
+        }
+
     }
 
     /// <summary>
@@ -74,5 +85,16 @@ public class PlayerMovement : MonoBehaviour
         body.AddForce(new Vector2(0, jumpForce * 100));
         Statistics.Increase(Statistics.Keys.Jumps, 1);
         animator.SetTrigger("Jump");
+    }
+
+    public void ToggleFlashlight()
+    {
+        if (isFlashlightOn == false)
+            flashlight.sprite = flashlightOn;
+
+        if (isFlashlightOn == true)
+            flashlight.sprite = flashlightOff;
+
+        isFlashlightOn = !isFlashlightOn;
     }
 }
