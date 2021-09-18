@@ -171,8 +171,11 @@ public class VN_Core : MonoBehaviour
     /// </summary>
     private void PlayAudio(string[] args)
     {
-        GameObject go = new GameObject(args[1]);
+        GameObject go = new GameObject(args[1].Trim());
         AudioSource source = go.AddComponent<AudioSource>();
+
+        go.transform.parent = transform;
+
         source.clip = Resources.Load<AudioClip>($"VisualNovel/{args[1].Trim()}");
         source.Play();
 
