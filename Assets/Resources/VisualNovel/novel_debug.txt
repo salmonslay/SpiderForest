@@ -26,5 +26,5 @@ DEL|Fabian.Angry
 CHAR|Fabian.Happy|200|0|1|1
 CHAR|Melwin.Happy|-200|0|1|1
 
-STOPAUDIO|Epitomize
-AUDIO|Victory_Royale_01
+WAIT|2
+FINISH

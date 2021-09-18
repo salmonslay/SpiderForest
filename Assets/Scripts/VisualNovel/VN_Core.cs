@@ -46,7 +46,7 @@ public class VN_Core : MonoBehaviour
         string[] line = actions[index++].Split('|');
 
         //cancel if this line is blank
-        if (line.Length < 2)
+        if (line.Length < 2 && line[0] != "FINISH")
         {
             RunNext();
             return;
@@ -83,6 +83,10 @@ public class VN_Core : MonoBehaviour
 
             case "audio":
                 PlayAudio(line);
+                break;
+
+            case "finish":
+                Finish();
                 break;
 
             default:
@@ -180,6 +184,15 @@ public class VN_Core : MonoBehaviour
         source.Play();
 
         RunNext();
+    }
+
+    /// <summary>
+    /// Start the game and destroy this VN
+    /// </summary>
+    private void Finish()
+    {
+        VisualNovel.ContinueScene();
+        Destroy(gameObject);
     }
 
     #endregion ACTIONS

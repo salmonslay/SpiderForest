@@ -21,7 +21,7 @@ public class VN_Textbox : MonoBehaviour
             if (core.skip) break;
 
             text.text += character;
-            yield return new WaitForSecondsRealtime(0.1f);
+            yield return new WaitForSecondsRealtime(0.05f);
         }
 
         core.skip = false;
