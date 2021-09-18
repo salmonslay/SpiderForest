@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// This class controls Level doors placed in the "main menu level".
+/// </summary>
 public class LevelDoor : MonoBehaviour
 {
     [Tooltip("Level this door will lead to upon interacting with it")]
