@@ -12,11 +12,14 @@ public class LevelDoor : MonoBehaviour
     [Tooltip("Audio clip to play when user tries to enter locked door")]
     [SerializeField] private AudioClip lockedAudio;
 
+    [Tooltip("Parent for the closed door, disabled when this door is usable.")]
+    [SerializeField] private GameObject doorClosed;
+
     private void Start()
     {
         if (level.Unlocked)
         {
-            // todo: add something to show it
+            doorClosed.SetActive(false);
         }
     }
 
