@@ -11,14 +11,13 @@ public class VisualNovel : MonoBehaviour
     {
         GameObject instance = Instantiate(Resources.Load("VisualNovel/Prefabs/VN Canvas")) as GameObject;
         instance.GetComponent<VN_Core>().ID = ID;
-        FreezeScene();
         return instance;
     }
 
     /// <summary>
     /// Freeze this scene
     /// </summary>
-    private static void FreezeScene()
+    public static void FreezeScene()
     {
         GameObject.Find("Music").GetComponent<AudioSource>().Pause();
         Time.timeScale = 0;
@@ -27,7 +26,7 @@ public class VisualNovel : MonoBehaviour
     /// <summary>
     /// Keep playing this scene after VN is done.
     /// </summary>
-    private static void ContinueScene()
+    public static void ContinueScene()
     {
         GameObject.Find("Music").GetComponent<AudioSource>().Play();
         Time.timeScale = 1;

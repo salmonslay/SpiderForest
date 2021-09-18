@@ -7,5 +7,6 @@ public class VN_Core : MonoBehaviour
 
     private void Start()
     {
+        VisualNovel.FreezeScene();
     }
 }
