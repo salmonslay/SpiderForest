@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VN_Core : MonoBehaviour
 {
@@ -62,6 +63,10 @@ public class VN_Core : MonoBehaviour
                 Text(line);
                 break;
 
+            case "bg":
+                SetBackground(line[1]);
+                break;
+
             default:
                 Debug.LogWarning($"Visual Novel action \"{action}\" not valid (INDEX {index}).");
                 RunNext();
@@ -81,6 +86,19 @@ public class VN_Core : MonoBehaviour
         textbox.portrait.sprite = Resources.Load<Sprite>($"VisualNovel/{args[1]}");
         textbox.nametag.text = args[2];
         StartCoroutine(textbox.Print(args[3]));
+    }
+
+    private void SetBackground(string file)
+    {
+        print(file);
+        GameObject background = Instantiate(Resources.Load("VisualNovel/Prefabs/Background"), transform, false) as GameObject;
+        background.GetComponent<Image>().sprite = Resources.Load<Sprite>($"VisualNovel/{file.Trim()}");
+
+        //set layer dependent on index
+        Vector3 pos = background.transform.localPosition;
+        background.transform.localPosition = new Vector3(pos.x, pos.y, index);
+
+        RunNext();
     }
 
     #endregion ACTIONS
