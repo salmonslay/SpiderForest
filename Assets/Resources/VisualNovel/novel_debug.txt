@@ -3,7 +3,7 @@ AUDIO|Epitomize
 CHAR|Fabian.Ideal|200|0|1|1
 CHAR|Melwin.Ideal|-200|0|1|1
 
-T|Melwin.Portrait|Mellie|Hey!
+T|Melwin.Portrait|Mellie|Hey! I am in a text box!
 T|Fabian.Portrait|Fabina|Hi, what's up?
 T|Melwin.Portrait|Mellie|Idk I'm kinda bored
 T|Fabian.Portrait|Fabina|Aw that sucks lol
