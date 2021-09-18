@@ -80,6 +80,10 @@ public class VN_Core : MonoBehaviour
                 StartCoroutine(Wait(line));
                 break;
 
+            case "audio":
+                PlayAudio(line);
+                break;
+
             default:
                 Debug.LogWarning($"Visual Novel action \"{action}\" not valid (INDEX {index}).");
                 RunNext();
@@ -142,7 +146,7 @@ public class VN_Core : MonoBehaviour
     }
 
     /// <summary>
-    /// Deletes a character if found
+    /// Deletes a character from scene if found
     /// </summary>
     private void DeleteCharacter(string[] args)
     {
@@ -158,6 +162,19 @@ public class VN_Core : MonoBehaviour
     private IEnumerator Wait(string[] args)
     {
         yield return new WaitForSecondsRealtime(float.Parse(args[1]));
+        RunNext();
+    }
+
+    /// <summary>
+    /// Plays an audio clip in the scene
+    /// </summary>
+    private void PlayAudio(string[] args)
+    {
+        GameObject go = new GameObject(args[1]);
+        AudioSource source = go.AddComponent<AudioSource>();
+        source.clip = Resources.Load<AudioClip>($"VisualNovel/{args[1].Trim()}");
+        source.Play();
+
         RunNext();
     }
 
