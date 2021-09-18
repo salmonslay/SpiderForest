@@ -71,6 +71,10 @@ public class VN_Core : MonoBehaviour
                 CreateCharacter(line);
                 break;
 
+            case "del":
+                DeleteCharacter(line);
+                break;
+
             default:
                 Debug.LogWarning($"Visual Novel action \"{action}\" not valid (INDEX {index}).");
                 RunNext();
@@ -115,6 +119,9 @@ public class VN_Core : MonoBehaviour
         RunNext();
     }
 
+    /// <summary>
+    /// Creates a new character in the scene
+    /// </summary>
     private void CreateCharacter(string[] args)
     {
         GameObject character = Instantiate(Resources.Load("VisualNovel/Prefabs/Character"), transform, false) as GameObject;
@@ -124,6 +131,18 @@ public class VN_Core : MonoBehaviour
         //set position and layer dependent on index
         character.transform.localPosition = new Vector3(float.Parse(args[2]), float.Parse(args[3]), index);
         character.transform.localScale = new Vector3(float.Parse(args[5]), float.Parse(args[5]), float.Parse(args[4]));
+        character.name = args[1].Trim();
+
+        RunNext();
+    }
+
+    /// <summary>
+    /// Deletes a character if found
+    /// </summary>
+    private void DeleteCharacter(string[] args)
+    {
+        GameObject chararacter = GameObject.Find($"{name}/{args[1].Trim()}");
+        if (chararacter) Destroy(chararacter);
 
         RunNext();
     }
