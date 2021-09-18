@@ -73,7 +73,8 @@ public class VN_Core : MonoBehaviour
                 break;
 
             case "del":
-                DeleteCharacter(line);
+            case "stopaudio":
+                DeleteObject(line[1]);
                 break;
 
             case "wait":
@@ -146,12 +147,12 @@ public class VN_Core : MonoBehaviour
     }
 
     /// <summary>
-    /// Deletes a character from scene if found
+    /// Deletes an object from scene if found
     /// </summary>
-    private void DeleteCharacter(string[] args)
+    private void DeleteObject(string name)
     {
-        GameObject chararacter = GameObject.Find($"{name}/{args[1].Trim()}");
-        if (chararacter) Destroy(chararacter);
+        GameObject obj = GameObject.Find($"{this.name}/{name.Trim()}");
+        if (obj) Destroy(obj);
 
         RunNext();
     }
