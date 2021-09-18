@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3513761586601791370}
   - component: {fileID: 3258454370207803796}
   m_Layer: 5
-  m_Name: VN Canvas
+  m_Name: _Canvas
   m_TagString: VisualNovel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

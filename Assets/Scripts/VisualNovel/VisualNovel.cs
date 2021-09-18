@@ -9,7 +9,7 @@ public class VisualNovel : MonoBehaviour
     /// <returns>The VN instance.</returns>
     public static GameObject Play(string ID)
     {
-        GameObject instance = Instantiate(Resources.Load("VisualNovel/Prefabs/VN Canvas")) as GameObject;
+        GameObject instance = Instantiate(Resources.Load("VisualNovel/Prefabs/_Canvas")) as GameObject;
         instance.GetComponent<VN_Core>().ID = ID;
         return instance;
     }
