@@ -4,7 +4,7 @@
 
 - T - Skapar en textbox med en bild-ikon
 
-  `T|person|text`
+  `T|bild|namn|text`
 
   
 
@@ -22,13 +22,13 @@
 
 - CHAR - Skapar eller flyttar en karaktär. Flip är antingen 1, eller -1 för att spegelvända karaktären.
 
-  `CHAR|person|x|y|flip`
+  `CHAR|bild|x|y|flip|skala`
 
   
 
 - DEL - Ta bort en utplacerad karaktär
 
-  `DEL|person`
+  `DEL|bild`
 
   
 
