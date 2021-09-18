@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -75,6 +76,10 @@ public class VN_Core : MonoBehaviour
                 DeleteCharacter(line);
                 break;
 
+            case "wait":
+                StartCoroutine(Wait(line));
+                break;
+
             default:
                 Debug.LogWarning($"Visual Novel action \"{action}\" not valid (INDEX {index}).");
                 RunNext();
@@ -144,6 +149,15 @@ public class VN_Core : MonoBehaviour
         GameObject chararacter = GameObject.Find($"{name}/{args[1].Trim()}");
         if (chararacter) Destroy(chararacter);
 
+        RunNext();
+    }
+
+    /// <summary>
+    /// Inserts a break.
+    /// </summary>
+    private IEnumerator Wait(string[] args)
+    {
+        yield return new WaitForSecondsRealtime(float.Parse(args[1]));
         RunNext();
     }
 
