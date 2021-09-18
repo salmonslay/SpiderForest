@@ -64,7 +64,7 @@ public class VN_Core : MonoBehaviour
                 break;
 
             case "bg":
-                SetBackground(line[1]);
+                SetBackground(line);
                 break;
 
             default:
@@ -76,6 +76,9 @@ public class VN_Core : MonoBehaviour
 
     #region ACTIONS
 
+    /// <summary>
+    /// Create a text box in this visual novel
+    /// </summary>
     private void Text(string[] args)
     {
         GameObject textboxObject = Instantiate(Resources.Load("VisualNovel/Prefabs/Textbox"), transform, false) as GameObject;
@@ -88,15 +91,22 @@ public class VN_Core : MonoBehaviour
         StartCoroutine(textbox.Print(args[3]));
     }
 
-    private void SetBackground(string file)
+    /// <summary>
+    /// Update the visual novel background
+    /// </summary>
+    private void SetBackground(string[] args)
     {
-        print(file);
         GameObject background = Instantiate(Resources.Load("VisualNovel/Prefabs/Background"), transform, false) as GameObject;
-        background.GetComponent<Image>().sprite = Resources.Load<Sprite>($"VisualNovel/{file.Trim()}");
+        background.GetComponent<Image>().sprite = Resources.Load<Sprite>($"VisualNovel/{args[1].Trim()}");
 
         //set layer dependent on index
         Vector3 pos = background.transform.localPosition;
         background.transform.localPosition = new Vector3(pos.x, pos.y, index);
+
+        //clear all characters if requested
+        if (args[2].Trim() == "1")
+            foreach (GameObject g in GameObject.FindGameObjectsWithTag("VN_Character"))
+                Destroy(g);
 
         RunNext();
     }
