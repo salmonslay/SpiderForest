@@ -67,6 +67,10 @@ public class VN_Core : MonoBehaviour
                 SetBackground(line);
                 break;
 
+            case "char":
+                CreateCharacter(line);
+                break;
+
             default:
                 Debug.LogWarning($"Visual Novel action \"{action}\" not valid (INDEX {index}).");
                 RunNext();
@@ -107,6 +111,19 @@ public class VN_Core : MonoBehaviour
         if (args[2].Trim() == "1")
             foreach (GameObject g in GameObject.FindGameObjectsWithTag("VN_Character"))
                 Destroy(g);
+
+        RunNext();
+    }
+
+    private void CreateCharacter(string[] args)
+    {
+        GameObject character = Instantiate(Resources.Load("VisualNovel/Prefabs/Character"), transform, false) as GameObject;
+
+        character.GetComponent<Image>().sprite = Resources.Load<Sprite>($"VisualNovel/{args[1].Trim()}");
+
+        //set position and layer dependent on index
+        character.transform.localPosition = new Vector3(float.Parse(args[2]), float.Parse(args[3]), index);
+        character.transform.localScale = new Vector3(float.Parse(args[5]), float.Parse(args[5]), float.Parse(args[4]));
 
         RunNext();
     }
