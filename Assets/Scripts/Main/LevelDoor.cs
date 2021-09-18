@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelDoor : MonoBehaviour
 {
@@ -15,8 +16,17 @@ public class LevelDoor : MonoBehaviour
     [Tooltip("Parent for the closed door, disabled when this door is usable.")]
     [SerializeField] private GameObject doorClosed;
 
+    [Tooltip("Canvas to hover above the door, with a text showing its destination")]
+    [SerializeField] private Transform levelCanvas;
+
+    [Tooltip("Original position for the levelText. Automatically assigned.")]
+    private Vector3 levelTextPos;
+
     private void Start()
     {
+        levelCanvas.GetComponentInChildren<Text>().text = level.levelName;
+        levelTextPos = levelCanvas.transform.position;
+
         if (level.Unlocked)
         {
             doorClosed.SetActive(false);
@@ -34,6 +44,9 @@ public class LevelDoor : MonoBehaviour
             else
                 ShakeDoor();
         }
+
+        //make levelText hover slowly
+        levelCanvas.transform.position = new Vector3(levelTextPos.x, Mathf.Sin(Time.time) * 0.1f + levelTextPos.y, levelTextPos.z);
     }
 
     /// <summary>
