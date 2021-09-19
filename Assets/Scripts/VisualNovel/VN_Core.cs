@@ -156,7 +156,20 @@ public class VN_Core : MonoBehaviour
     private void DeleteObject(string name)
     {
         GameObject obj = GameObject.Find($"{this.name}/{name.Trim()}");
-        if (obj) Destroy(obj);
+
+        if (obj)
+        {
+            Animator anim = obj.GetComponent<Animator>();
+            if (anim)
+            {
+                anim.Play("characterPopdown");
+                Destroy(obj, 1f);
+            }
+            else
+            {
+                Destroy(obj);
+            }
+        }
 
         RunNext();
     }
@@ -192,7 +205,8 @@ public class VN_Core : MonoBehaviour
     private void Finish()
     {
         VisualNovel.ContinueScene();
-        Destroy(gameObject);
+        GetComponent<Animator>().Play("Close");
+        Destroy(gameObject, 0.5f);
     }
 
     #endregion ACTIONS

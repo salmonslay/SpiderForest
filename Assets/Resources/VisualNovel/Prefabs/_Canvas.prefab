@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3513761586601791369}
   - component: {fileID: 3513761586601791370}
   - component: {fileID: 3258454370207803796}
+  - component: {fileID: 2057025724}
   m_Layer: 5
   m_Name: _Canvas
   m_TagString: VisualNovel
@@ -112,7 +113,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e598cbf1d6924c4b95de3b0c1e23d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: DEBUG
+  ID: debug
   actions: []
   skip: 0
   waiting: 1
+--- !u!95 &2057025724
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513761586601791371}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7627604a52293647813bbe37468471e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
