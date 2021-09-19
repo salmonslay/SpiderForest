@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Enemy
   - LevelDoor
+  - VisualNovel
+  - VN_Character
   layers:
   - Default
   - TransparentFX

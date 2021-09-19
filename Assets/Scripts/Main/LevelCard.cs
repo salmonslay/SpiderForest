@@ -5,6 +5,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Container for level cards used in the main menu.
 /// </summary>
+[System.Obsolete]
 public class LevelCard : MonoBehaviour
 {
     public string ID;

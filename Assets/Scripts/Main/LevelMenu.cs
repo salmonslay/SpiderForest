@@ -4,6 +4,7 @@ using UnityEngine;
 /// <summary>
 /// Adds all levels to the scroll view in the main menu at start
 /// </summary>
+[System.Obsolete]
 public class LevelMenu : MonoBehaviour
 {
     [SerializeField] private GameObject scrollView;
