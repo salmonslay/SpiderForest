@@ -9,6 +9,7 @@ T|Melwin.Portrait|Mellie|Idk I'm kinda bored
 T|Fabian.Portrait|Fabina|Aw that sucks lol
 
 CHAR|bee|0|0|1|0.2
+ALERT|A bee suddenly appears...
 
 T|Melwin.Portrait|Mellie|Oh shit it's a bee
 DEL|Melwin.Ideal

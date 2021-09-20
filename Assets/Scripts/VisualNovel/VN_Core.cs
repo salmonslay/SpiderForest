@@ -64,6 +64,10 @@ public class VN_Core : MonoBehaviour
                 Text(line);
                 break;
 
+            case "alert":
+                Alert(line);
+                break;
+
             case "bg":
                 SetBackground(line);
                 break;
@@ -111,6 +115,19 @@ public class VN_Core : MonoBehaviour
         textbox.portrait.sprite = Resources.Load<Sprite>($"VisualNovel/{args[1]}");
         textbox.nametag.text = args[2];
         StartCoroutine(textbox.Print(args[3]));
+    }
+
+    /// <summary>
+    /// Create a text box in this visual novel without an attached character
+    /// </summary>
+    private void Alert(string[] args)
+    {
+        GameObject textboxObject = Instantiate(Resources.Load("VisualNovel/Prefabs/Alertbox"), transform, false) as GameObject;
+        VN_Textbox textbox = textboxObject.GetComponent<VN_Textbox>();
+
+        textbox.name = "Textbox";
+        textbox.core = this;
+        StartCoroutine(textbox.Print(args[1]));
     }
 
     /// <summary>
