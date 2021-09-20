@@ -223,7 +223,7 @@ public class VN_Core : MonoBehaviour
     {
         VisualNovel.ContinueScene();
         GetComponent<Animator>().Play("Close");
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 0.4f);
     }
 
     #endregion ACTIONS
