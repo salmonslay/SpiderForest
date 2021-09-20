@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+
+        // turn on flashlight sprite
+        flashlight.enabled = true;
     }
 
     private void Update()

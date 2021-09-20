@@ -19,6 +19,11 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
+    /// <summary>
+    /// Add a power up to the UI, and then deletes it when the duration is over
+    /// </summary>
+    /// <param name="sprite">Sprite to add</param>
+    /// <param name="delay">Duration the power up lasts</param>
     public IEnumerator AddPower(Sprite sprite, float delay)
     {
         GameObject g = new GameObject();

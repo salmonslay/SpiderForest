@@ -3,14 +3,10 @@ using UnityEngine.UI;
 
 public class QuestSign : MonoBehaviour
 {
-    /// <summary>
-    /// Animator of text to change
-    /// </summary>
+    [Tooltip("Animator of text to change")]
     [SerializeField] private GameObject textObj;
 
-    /// <summary>
-    /// Exclamation mark to hover while quest is not complete
-    /// </summary>
+    [Tooltip("Exclamation mark to hover while quest is not complete")]
     [SerializeField] private Transform exclamationMark;
 
     private Vector3 exclamationMarkPos;
@@ -31,7 +27,7 @@ public class QuestSign : MonoBehaviour
     private void Update()
     {
         exclamationMark.position = new Vector3(exclamationMarkPos.x, Mathf.Sin(Time.time) * 0.25f + exclamationMarkPos.y, exclamationMarkPos.z);
-        if (quest.IsComplete) exclamationMark.gameObject.SetActive(false);
+        if (quest.IsCompletedHere) exclamationMark.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,7 +40,7 @@ public class QuestSign : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        exclamationMark.gameObject.SetActive(!quest.IsComplete);
+        exclamationMark.gameObject.SetActive(!quest.IsCompletedHere);
         textObj.GetComponent<Animator>().Play("quest_popOut", 0, 0);
     }
 }

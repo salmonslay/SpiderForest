@@ -16,4 +16,20 @@ public class Level : ScriptableObject
 
     [Tooltip("Level icon shown in main menu")]
     public Sprite levelIcon;
+
+    public string CompletionKey
+    {
+        get
+        {
+            return "COMPLETED_" + ID;
+        }
+    }
+
+    public bool Unlocked
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(CompletionKey, 0) == 1;
+        }
+    }
 }

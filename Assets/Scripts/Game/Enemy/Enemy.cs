@@ -9,9 +9,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public Rigidbody2D body;
     [HideInInspector] public float movementDirection = 1f;
 
-    /// <summary>
-    /// Damage this enemy will do on direct impact
-    /// </summary>
+    [Tooltip("Damage this enemy will do on direct impact")]
     public int damage;
 
     public virtual void Start()

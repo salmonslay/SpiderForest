@@ -6,28 +6,19 @@ using UnityEngine;
 /// </summary>
 public class PowerUp : MonoBehaviour, IPowerUp
 {
-    /// <summary>
-    /// A name for this power up
-    /// (currently not used anywhere though)
-    /// </summary>
+    [Tooltip("A name for this power up")]
     [SerializeField] public string Name;
 
-    /// <summary>
-    /// Icon shown in UI and in-game
-    /// </summary>
+    [Tooltip("Icon shown in UI and in-game")]
     private Sprite icon;
 
-    /// <summary>
-    /// Duration for this power up to run
-    /// </summary>
+    [Tooltip("Duration for this power up to run")]
     public float Duration;
 
     [SerializeField] private AudioClip powerup;
     [SerializeField] private AudioClip powerdown;
 
-    /// <summary>
-    /// Position this item originally spawned at
-    /// </summary>
+    [Tooltip("Position this item originally spawned at")]
     private Vector3 pos;
 
     private ParticleSystem.EmissionModule particleEmission;

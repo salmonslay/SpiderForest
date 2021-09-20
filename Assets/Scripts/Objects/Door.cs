@@ -21,7 +21,7 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        SetState(questCondition.IsComplete);
+        SetState(questCondition.IsCompletedHere);
     }
 
     /// <summary>

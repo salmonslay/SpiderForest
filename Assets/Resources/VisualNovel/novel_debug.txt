@@ -1,0 +1,31 @@
+BG|DSV|0
+AUDIO|Epitomize
+CHAR|Fabian.Ideal|200|0|1|1
+CHAR|Melwin.Ideal|-200|0|1|1
+
+T|Melwin.Portrait|Mellie|Hey! I am in a text box!
+T|Fabian.Portrait|Fabina|Hi, what's up?
+T|Melwin.Portrait|Mellie|Idk I'm kinda bored
+T|Fabian.Portrait|Fabina|Aw that sucks lol
+
+CHAR|bee|0|0|1|0.2
+ALERT|A bee suddenly appears...
+
+T|Melwin.Portrait|Mellie|Oh shit it's a bee
+DEL|Melwin.Ideal
+CHAR|Melwin.Angry|-200|0|1|1
+
+T|Melwin.Portrait|Mellie|BEGONE BEE
+T|bee|Bee|Fine
+
+WAIT|1
+DEL|bee
+
+DEL|Melwin.Angry
+DEL|Fabian.Angry
+
+CHAR|Fabian.Happy|200|0|1|1
+CHAR|Melwin.Happy|-200|0|1|1
+
+WAIT|2
+FINISH
