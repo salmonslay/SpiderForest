@@ -42,6 +42,12 @@ public class VN_Core : MonoBehaviour
     /// </summary>
     public void RunNext()
     {
+        if (index == actions.Length)
+        {
+            Finish();
+            return;
+        }
+
         //split line into arguments
         string[] line = actions[index++].Split('|');
 
