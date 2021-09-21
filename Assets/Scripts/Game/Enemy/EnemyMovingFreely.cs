@@ -1,9 +1,9 @@
 using UnityEngine;
 
 /// <summary>
-/// Base class for enemies that will move until they hit a collider or a slope.
+/// Base class for enemies that will move freely until they hit a collider or a slope.
 /// </summary>
-public class EnemyMoving : Enemy
+public class EnemyMovingFreely : Enemy
 {
     [Tooltip("Speed multiplier this enemy will move by")]
     [SerializeField] private float speed = 5f;
