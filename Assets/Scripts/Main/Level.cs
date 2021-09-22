@@ -18,6 +18,9 @@ public class Level : ScriptableObject
     [Tooltip("Level icon shown in main menu")]
     public Sprite levelIcon;
 
+    [Tooltip("Whether this level always should be open")]
+    [SerializeField] private bool alwaysUnlocked = false;
+
     public string CompletionKey
     {
         get
@@ -38,7 +41,7 @@ public class Level : ScriptableObject
     {
         get
         {
-            return PlayerPrefs.GetInt(CompletionKey, 0) == 1;
+            return PlayerPrefs.GetInt(CompletionKey, 0) == 1 || alwaysUnlocked;
         }
     }
 }
