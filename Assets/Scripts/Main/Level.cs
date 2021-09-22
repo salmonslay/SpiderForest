@@ -1,13 +1,13 @@
 using System;
+using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "Level", menuName = "platform!/Level", order = 1)]
 [Serializable]
 public class Level : ScriptableObject
 {
     [Tooltip("ID used to load this level")]
-    [SerializeField] private Scene scene;
+    [SerializeField] private SceneAsset scene;
 
     [Tooltip("Level name shown in main menu")]
     public string levelName;
