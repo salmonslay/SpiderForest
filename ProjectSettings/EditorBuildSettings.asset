@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Old/level_2.unity
     guid: 6b2ee9b0381046644b44988e8e4869a2
   - enabled: 1
-    path: Assets/Scenes/Room3.unity
+    path: Assets/Scenes/Room_3.unity
     guid: d669d6f71244d5f45bea857ad6943b80
   - enabled: 1
     path: Assets/Scenes/Bonus1.unity
