@@ -26129,6 +26129,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2241870364422326606, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453751754201980428, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6045859
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453751754201980428, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.16584551
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
 --- !u!1001 &2434802888335917731
