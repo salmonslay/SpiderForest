@@ -100,8 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Duration: 5
-  powerup: {fileID: 0}
-  powerdown: {fileID: 0}
+  powerup: {fileID: 8300000, guid: 50568358de15e6949be3adcda2743bd2, type: 3}
+  powerdown: {fileID: 8300000, guid: 97096932096ac4a4baf7d9d41ed7241e, type: 3}
 --- !u!61 &9022684295788327729
 BoxCollider2D:
   m_ObjectHideFlags: 0
