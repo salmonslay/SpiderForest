@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
         GameObject g = new GameObject();
         Image renderer = g.AddComponent<Image>();
 
-        g.transform.parent = PowerUpHolder;
+        g.transform.SetParent(PowerUpHolder);
         renderer.sprite = sprite;
 
         yield return new WaitForSeconds(delay);
