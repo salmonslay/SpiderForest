@@ -3,7 +3,6 @@ using UnityEngine;
 /// <summary>
 /// Controls the main menu and its panels
 /// </summary>
-[System.Obsolete]
 public class MainManager : MonoBehaviour
 {
     [SerializeField] private Animator mainContainer;

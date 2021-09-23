@@ -338,9 +338,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<b><size=20>Game</size></b>\n   Fabian Lindgren\n\n<b><size=20>Assets</size>\n 
-    Audio</b>\n    Mittsies\n    Dean Herbert\n\n  <b>Sprites</b>\n    Kenney \n   
-    Ryan Koons\n"
+  m_Text: "<b><size=20>Game</size></b>\n   Nora Gate\n   Emma Almer\n   Fabian Lindgren\n\n<b><size=20>Assets</size>\n 
+    Audio</b>\n    Mittsies\n    Dean Herbert\n\n  <b>Sprites</b>\n    Kenney "
 --- !u!222 &81935304
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2780,8 +2779,12 @@ MonoBehaviour:
   levelTemplate: {fileID: 6117359127004768146, guid: c8b9b3ba25dbefb4095d9cd382cb1cc8, type: 3}
   rect: {fileID: 79118756}
   levels:
+  - {fileID: 11400000, guid: 85dccefff7d3ba84ba6ee847910485b9, type: 2}
   - {fileID: 11400000, guid: 40b9772d6b431be478c625401d37fe7e, type: 2}
   - {fileID: 11400000, guid: 9036f7dc4c92e73418c26f7d9d38fbd7, type: 2}
+  - {fileID: 11400000, guid: 548772da8336b2b4e8111c98cca50b6b, type: 2}
+  - {fileID: 11400000, guid: 15d2019e934268243a2f1be799f6bb2d, type: 2}
+  - {fileID: 11400000, guid: c0a2589424c505e4dbfcab08e41b6f9f, type: 2}
 --- !u!95 &1195717700
 Animator:
   serializedVersion: 3
