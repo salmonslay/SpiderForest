@@ -9,12 +9,16 @@ public class EnemyMovingPoints : Enemy
     private List<Vector3> points = new List<Vector3>();
     private int targetIndex = 0;
 
+    private new SpriteRenderer renderer;
+
     public float speed = 5f;
 
     public override void Start()
     {
         //run Start() on base class
         base.Start();
+
+        renderer = GetComponent<SpriteRenderer>();
 
         // add all child gameobjects named "point" to pointlist
         foreach (Transform t in transform.parent.GetComponentsInChildren<Transform>())
@@ -31,6 +35,11 @@ public class EnemyMovingPoints : Enemy
     {
         Vector3 target = points[targetIndex];
         transform.position = Vector2.MoveTowards(transform.position, target, 5 * Time.deltaTime);
+
+        //set rotation
+        renderer.flipX = transform.position.x < target.x;
+
+        //update target
         if (transform.position == target)
         {
             if (++targetIndex == points.Count) targetIndex = 0;
@@ -39,7 +48,6 @@ public class EnemyMovingPoints : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("o");
         // if enemy hits a player - do harm
         if (collision.gameObject.CompareTag("Player"))
         {
