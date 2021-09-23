@@ -1,5 +1,4 @@
 using System;
-using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Level", menuName = "platform!/Level", order = 1)]
@@ -7,7 +6,7 @@ using UnityEngine;
 public class Level : ScriptableObject
 {
     [Tooltip("ID used to load this level")]
-    [SerializeField] private SceneAsset scene;
+    [SerializeField] private string sceneID;
 
     [Tooltip("Level name shown in main menu")]
     public string levelName;
@@ -33,7 +32,7 @@ public class Level : ScriptableObject
     {
         get
         {
-            return scene.name;
+            return sceneID;
         }
     }
 

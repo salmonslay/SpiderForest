@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01538468ba9209445bdebb7001e68a38, type: 3}
   m_Name: RoomBonus2
   m_EditorClassIdentifier: 
-  scene: {fileID: 102900000, guid: 0251d6cde7d93e445bc3f5671b5caba7, type: 3}
+  sceneID: Bonus2
   levelName: Bonus 2
   levelDescription: 
   levelIcon: {fileID: 0}
