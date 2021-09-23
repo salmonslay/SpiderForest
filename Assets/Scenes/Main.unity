@@ -1406,7 +1406,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -2780,8 +2780,8 @@ MonoBehaviour:
   levelTemplate: {fileID: 6117359127004768146, guid: c8b9b3ba25dbefb4095d9cd382cb1cc8, type: 3}
   rect: {fileID: 79118756}
   levels:
-  - {fileID: 11400000, guid: 49b3be7ca30674d4abbf389dea0c479a, type: 2}
-  - {fileID: 11400000, guid: cb7c1e2711f6e0f4bb3dd5adaf4bb811, type: 2}
+  - {fileID: 11400000, guid: 40b9772d6b431be478c625401d37fe7e, type: 2}
+  - {fileID: 11400000, guid: 9036f7dc4c92e73418c26f7d9d38fbd7, type: 2}
 --- !u!95 &1195717700
 Animator:
   serializedVersion: 3
@@ -3997,15 +3997,15 @@ RectTransform:
   m_GameObject: {fileID: 2109588902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 555474723}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 895.0262, y: 503.4416}
+  m_SizeDelta: {x: -368.97382, y: -96.55841}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109588904
 MonoBehaviour:
