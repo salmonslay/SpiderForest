@@ -15,5 +15,5 @@ MonoBehaviour:
   sceneID: Room_2
   levelName: Room 2
   levelDescription: 
-  levelIcon: {fileID: 0}
+  levelIcon: {fileID: 21300000, guid: a160b1090249be84b8b7212988b10550, type: 3}
   alwaysUnlocked: 0

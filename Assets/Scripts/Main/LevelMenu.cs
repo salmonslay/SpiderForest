@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Adds all levels to the scroll view in the main menu at start
@@ -22,6 +23,12 @@ public class LevelMenu : MonoBehaviour
             level.levelName.text = levels[i].levelName;
             level.levelDescription.text = levels[i].levelDescription;
             level.levelIcon.sprite = levels[i].levelIcon;
+
+            if (!levels[i].Unlocked)
+            {
+                obj.GetComponent<Button>().interactable = false;
+                level.levelIcon.color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
+            }
 
             obj.transform.SetParent(scrollView.transform, false);
         }
