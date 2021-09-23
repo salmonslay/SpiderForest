@@ -12,7 +12,7 @@ public class PlayerState : MonoBehaviour
     {
         set
         {
-            value.z = -1;
+            value.z = 0;
             _respawnPosition = value;
         }
         get
