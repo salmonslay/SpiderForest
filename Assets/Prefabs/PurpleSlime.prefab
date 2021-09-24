@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
+  EnemyKillSound: {fileID: 8300000, guid: 57e6dab219ba8444fa37ad9e5e498e7f, type: 3}
 --- !u!1 &107182967887184045
 GameObject:
   m_ObjectHideFlags: 0

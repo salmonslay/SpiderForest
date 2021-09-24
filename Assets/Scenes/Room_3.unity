@@ -998,6 +998,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5799693586422653528, guid: fa184a6ebf984da498aae87067eb20b0, type: 3}
   m_PrefabInstance: {fileID: 275846615}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &286903554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2241870362616591349, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
+  m_PrefabInstance: {fileID: 2241870363944110438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &286903563
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286903554}
+  m_Enabled: 1
 --- !u!1 &293752157
 GameObject:
   m_ObjectHideFlags: 0
@@ -6218,7 +6231,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
@@ -6227,14 +6239,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63309,6 +63313,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 286903562, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2241870362616591344, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
       propertyPath: m_RootOrder
       value: 17
