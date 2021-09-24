@@ -1,0 +1,10 @@
+AUDIO|Epitomize
+CHAR|Player.Neutral|-100|0|1|1
+
+T|Player|Siri|uuughgh det där var läbbigt men vi klarade det!!
+T|Player|Siri|JIPPIE
+T|Player|Siri|Och se där rum två är upplåst!
+CHAR|Player.Fear|-100|0|1|1
+T|Player|Siri|Hoppas inte det är läskigare där inne!
+
+FINISH
