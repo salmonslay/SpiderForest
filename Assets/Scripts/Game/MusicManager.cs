@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
-    private void Start()
+    private void Awake()
     {
         if (!GameObject.Find("Music"))
         {
@@ -15,9 +15,10 @@ public class MusicManager : MonoBehaviour
             source.Play();
             source.loop = true;
         }
-        else if (SceneManager.GetActiveScene().name == "Main")
+        else 
         {
-            Destroy(gameObject);
+            if (SceneManager.GetActiveScene().name == "Main")
+                Destroy(gameObject);
         }
     }
 }

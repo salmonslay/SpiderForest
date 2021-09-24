@@ -19,7 +19,7 @@ public class VisualNovel : MonoBehaviour
     /// </summary>
     public static void FreezeScene()
     {
-        GameObject.Find("Music").GetComponent<AudioSource>().Pause();
+        //GameObject.Find("Music").GetComponent<AudioSource>().Pause();
         Time.timeScale = 0;
     }
 
