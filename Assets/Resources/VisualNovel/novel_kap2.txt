@@ -1,0 +1,8 @@
+AUDIO|Epitomize
+CHAR|Player.Neutral|-100|0|1|1
+
+T|Player|Siri|Bra gjort vi har tagit oss till spindelns hus!
+T|Player|Siri|Nu måste vi ta oss förbi rummen för att komma till kammaren hon hölls fången.
+T|Player|Siri|Titta rum 1 är nu upplåst!!
+
+FINISH
