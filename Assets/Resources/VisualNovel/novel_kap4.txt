@@ -6,7 +6,5 @@ DEL|Player.Fear
 CHAR|Player.Neutral|-100|0|1|1
 T|Player|Siri|But we succeeded!
 T|Player|Siri|My sister Ingrid should be in the last room, do your best!
-T|Player|Siri|Also, remember to turn off your flashlight while encountering the ghosts!
-T|Player|Siri|They have a pretty bad eyesight even though they are ghosts, so the darkness should protect you a bit!
 
 FINISH
