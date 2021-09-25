@@ -15,10 +15,10 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Vector3 target = nodes[targetIndex].position;
-        transform.position = Vector2.MoveTowards(transform.position, target, 5 * Time.fixedDeltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, 5 * Time.deltaTime);
         if (transform.position == target)
         {
             if (++targetIndex == nodes.Length) targetIndex = 0;
