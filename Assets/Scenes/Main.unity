@@ -339,7 +339,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "<b><size=20>Game</size></b>\n   Nora Gate\n   Emma Almer\n   Fabian Lindgren\n\n<b><size=20>Assets</size>\n 
-    Audio</b>\n    Mittsies\n    Dean Herbert\n\n  <b>Sprites</b>\n    Kenney "
+    Audio</b>\n    Mittsies\n    Dean Herbert\n\n  <b>Sprites</b>\n    Nora Gate"
 --- !u!222 &81935304
 CanvasRenderer:
   m_ObjectHideFlags: 0
