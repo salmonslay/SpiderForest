@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +13,7 @@ public class VN_Textbox : MonoBehaviour
 
     public IEnumerator Print(string textToPrint)
     {
-        string parsedText = textToPrint.Replace("{PLAYER}", System.Environment.UserName);
+        string parsedText = textToPrint.Replace("{PLAYER}", Environment.UserName);
         core.waiting = false;
         text.text = "";
 
