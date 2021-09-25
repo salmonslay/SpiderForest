@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RoomBonus1
   m_EditorClassIdentifier: 
   sceneID: Bonus1
-  levelName: Bonus 1
-  levelDescription: 
+  levelName: 'B1: The eerie nest'
+  levelDescription: Another basement? I got a feeling this will be a tough one...
   levelIcon: {fileID: 0}
   alwaysUnlocked: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Room3
   m_EditorClassIdentifier: 
   sceneID: Room_3
-  levelName: Room 3
-  levelDescription: 
+  levelName: '3: It''s getting deeper'
+  levelDescription: Really, a basement? I will have to investigate this...
   levelIcon: {fileID: 0}
   alwaysUnlocked: 0
