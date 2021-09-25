@@ -132,6 +132,8 @@ MonoBehaviour:
   movementDirection: 1
   damage: 1
   speed: 5
+  canSeePlayer: {fileID: 21300000, guid: 18a7534a9d387d345b7e393008a5f4a4, type: 3}
+  lostInDarkness: {fileID: 21300000, guid: 753a6e5aebdb3074cbc76988aeceeb90, type: 3}
 --- !u!61 &2436078072244779725
 BoxCollider2D:
   m_ObjectHideFlags: 0
