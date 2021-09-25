@@ -34,7 +34,7 @@ public class EnemyMovingPoints : Enemy
     private void Update()
     {
         Vector3 target = points[targetIndex];
-        transform.position = Vector2.MoveTowards(transform.position, target, 5 * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
         //set rotation
         renderer.flipX = transform.position.x < target.x;

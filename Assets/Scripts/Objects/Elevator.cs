@@ -48,11 +48,11 @@ public class Elevator : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, nodes[0].position);
         for (int i = 0; i < nodes.Length - 1; i++)
         {
             Gizmos.DrawLine(nodes[i].position, nodes[i + 1].position);
         }
-        Gizmos.DrawLine(nodes[nodes.Length - 1].position, transform.position);
+        Gizmos.DrawLine(nodes[nodes.Length - 1].position, nodes[0].position);
+
     }
 }
