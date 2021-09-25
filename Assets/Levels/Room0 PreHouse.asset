@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Room0 PreHouse
   m_EditorClassIdentifier: 
   sceneID: level_PreHouesEnter
-  levelName: '0: New adventures'
+  levelName: New adventures
   levelDescription: Your adventure starts here...
   levelIcon: {fileID: 21300000, guid: 18f6514afe84ac747acd950b093bf361, type: 3}
   alwaysUnlocked: 1

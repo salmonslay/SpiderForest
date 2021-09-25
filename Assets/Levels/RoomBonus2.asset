@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RoomBonus2
   m_EditorClassIdentifier: 
   sceneID: Bonus2
-  levelName: 'B2: The pitfall'
+  levelName: The deep pitfall
   levelDescription: There has to be something great up there... Right?
   levelIcon: {fileID: 0}
   alwaysUnlocked: 0
