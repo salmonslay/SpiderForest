@@ -61,8 +61,8 @@ public class EnemyMovingPoints : Enemy
         // if enemy hits a player - do harm
         if (collision.gameObject.CompareTag("Player"))
         {
-            // do harm if flashlight is enabled
-            if (collision.GetComponent<PlayerMovement>().isFlashlightOn)
+            // do harm if flashlight is enabled or else check a 25% risk
+            if (collision.GetComponent<PlayerMovement>().isFlashlightOn || Random.Range(0, 5) == 2)
             {
                 PlayerState state = collision.gameObject.GetComponent<PlayerState>();
                 state.Harm(damage);
