@@ -12,10 +12,11 @@ public class MusicManager : MonoBehaviour
             DontDestroyOnLoad(music);
             AudioSource source = music.AddComponent<AudioSource>();
             source.clip = Resources.Load<AudioClip>("LevelMusic");
-            source.Play();
             source.loop = true;
+            source.volume = 0.3f;
+            source.Play();
         }
-        else 
+        else
         {
             if (SceneManager.GetActiveScene().name == "Main")
                 Destroy(gameObject);
