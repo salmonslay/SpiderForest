@@ -13,7 +13,7 @@ public class MusicManager : MonoBehaviour
             AudioSource source = music.AddComponent<AudioSource>();
             source.clip = Resources.Load<AudioClip>("LevelMusic");
             source.loop = true;
-            source.volume = 0.3f;
+            source.volume = 0.15f;
             source.Play();
         }
         else
