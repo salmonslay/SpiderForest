@@ -1,6 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Plays random ambience noises at random intervals
+/// </summary>
 public class Ambience : MonoBehaviour
 {
     public AudioClip[] ambience;

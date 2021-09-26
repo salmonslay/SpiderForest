@@ -13950,6 +13950,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 329b70ca3d0c2904a9d94b8279a0ffd1, type: 3}
+--- !u!1 &1657166739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2180980545421571736, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
+  m_PrefabInstance: {fileID: 1735748671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1657166740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657166739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b712f2ff2ba544b95fc42462bf3e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToUnlock: {fileID: 0}
+  condition: 
+  NeededAmount: 0
+  CurrentAmount: 0
+  _questDescription: Collect @ coins
+  _completionDescription: Nice
 --- !u!1001 &1700635231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14119,6 +14142,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 11400000, guid: 85dccefff7d3ba84ba6ee847910485b9, type: 2}
+    - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
+      propertyPath: state
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
+      propertyPath: forceOpen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
+      propertyPath: questCondition
+      value: 
+      objectReference: {fileID: 1657166740}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
 --- !u!1001 &1751393841

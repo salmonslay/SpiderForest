@@ -17,6 +17,7 @@ public class LevelCard : MonoBehaviour
     /// </summary>
     public void Load()
     {
+        Level0Manager.state = Level0Manager.State.NeverPlayed;
         SceneManager.LoadScene(ID);
     }
 }

@@ -8,20 +8,22 @@ public class Door : MonoBehaviour
     public GameObject openState;
     public GameObject closedState;
     private bool isOpen = false;
+    public bool forceOpen = false;
+
+    [SerializeField] private Level0Manager.State state;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isOpen)
         {
-            //maybe play some cutscene?
-
+            Level0Manager.state = state;
             SceneManager.LoadScene(level.ID);
         }
     }
 
     private void Update()
     {
-        SetState(questCondition.IsCompletedHere);
+        SetState(questCondition.IsCompletedHere || forceOpen);
     }
 
     /// <summary>

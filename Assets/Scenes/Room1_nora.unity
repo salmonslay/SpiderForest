@@ -38425,6 +38425,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 85dccefff7d3ba84ba6ee847910485b9, type: 2}
     - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
+      propertyPath: state
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
       propertyPath: questCondition
       value: 
       objectReference: {fileID: 1000778622}
