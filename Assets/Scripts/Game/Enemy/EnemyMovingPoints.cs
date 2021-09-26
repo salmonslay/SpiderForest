@@ -13,12 +13,18 @@ public class EnemyMovingPoints : Enemy
 
     public float speed = 5f;
 
+    [SerializeField] private Sprite canSeePlayer;
+    [SerializeField] private Sprite lostInDarkness;
+
+    private PlayerMovement player;
+
     public override void Start()
     {
         //run Start() on base class
         base.Start();
 
         renderer = GetComponent<SpriteRenderer>();
+        player = FindObjectOfType<PlayerMovement>();
 
         // add all child gameobjects named "point" to pointlist
         foreach (Transform t in transform.parent.GetComponentsInChildren<Transform>())
@@ -34,7 +40,7 @@ public class EnemyMovingPoints : Enemy
     private void Update()
     {
         Vector3 target = points[targetIndex];
-        transform.position = Vector2.MoveTowards(transform.position, target, 5 * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
         //set rotation
         renderer.flipX = transform.position.x < target.x;
@@ -44,6 +50,10 @@ public class EnemyMovingPoints : Enemy
         {
             if (++targetIndex == points.Count) targetIndex = 0;
         }
+
+        //set sprite
+        renderer.sprite = player.isFlashlightOn ? canSeePlayer : lostInDarkness;
+        renderer.color = player.isFlashlightOn ? new Color(1, 1, 1, 0.5f) : Color.white;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,8 +61,12 @@ public class EnemyMovingPoints : Enemy
         // if enemy hits a player - do harm
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerState state = collision.gameObject.GetComponent<PlayerState>();
-            state.Harm(damage);
+            // do harm if flashlight is enabled
+            if (collision.GetComponent<PlayerMovement>().isFlashlightOn)
+            {
+                PlayerState state = collision.gameObject.GetComponent<PlayerState>();
+                state.Harm(damage);
+            }
         }
     }
 }

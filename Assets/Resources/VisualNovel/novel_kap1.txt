@@ -1,11 +1,10 @@
 AUDIO|Epitomize
-CHAR|Player.Neutral|100|0|-1|1
-
-T|Player|Siri|Yey vi klarade även detta rum!!
-T|Player|Siri|Och titta där!
-CHAR|Player.Disgust|-100|0|1|1
-T|Player|Siri|Syster Ingrid hålls fast av den gigantiska spindeln!
 CHAR|Player.Concern|-100|0|1|1
-T|Player|Siri|Schas schas med dig! 
+
+T|Player|Siri|Hey! {PLAYER}! Can you please help me?
+CHAR|Player.Disgust|-100|0|1|1
+T|Player|Siri|My sister Ingrid has been kidnapped by a giant spider!
+T|Player|Siri|The spider led her through the bewitched forest and keeps her trapped in the haunted house and I'm too scared to do it alone!
+T|Player|Siri|I need your help to save her!
 
 FINISH

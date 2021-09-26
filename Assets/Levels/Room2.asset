@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Room2
   m_EditorClassIdentifier: 
   sceneID: Room_2
-  levelName: Room 2
-  levelDescription: 
+  levelName: Hellevator hell
+  levelDescription: What is this house even? Ingrid has to be here somewhere...
   levelIcon: {fileID: 21300000, guid: a160b1090249be84b8b7212988b10550, type: 3}
   alwaysUnlocked: 0

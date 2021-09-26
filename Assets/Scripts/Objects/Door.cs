@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public string sceneID;
+    public Level level;
     public Quest questCondition;
     public GameObject openState;
     public GameObject closedState;
@@ -15,7 +15,7 @@ public class Door : MonoBehaviour
         {
             //maybe play some cutscene?
 
-            SceneManager.LoadScene(sceneID);
+            SceneManager.LoadScene(level.ID);
         }
     }
 

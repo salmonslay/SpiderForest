@@ -1,10 +1,10 @@
 AUDIO|Epitomize
 CHAR|Player.Fear|-100|0|1|1
 
-T|Player|Siri|BBRRRRRR!!!! Det där var riktigt otäckt!!
+T|Player|Siri|BBRRRRRR!!!! That was really nasty!!
 DEL|Player.Fear
 CHAR|Player.Neutral|-100|0|1|1
-T|Player|Siri|Men vi lyckades hela vägen!!
-T|Player|Siri|Nu är det bara rum 3 kvar sen kan vi äntligen rädda min syster Ingrid!
+T|Player|Siri|But we succeeded!
+T|Player|Siri|My sister Ingrid should be in the last room, do your best!
 
 FINISH

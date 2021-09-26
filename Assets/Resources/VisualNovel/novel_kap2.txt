@@ -1,8 +1,8 @@
 AUDIO|Epitomize
 CHAR|Player.Neutral|-100|0|1|1
 
-T|Player|Siri|Bra gjort vi har tagit oss till spindelns hus!
-T|Player|Siri|Nu måste vi ta oss förbi rummen för att komma till kammaren hon hölls fången.
-T|Player|Siri|Titta rum 1 är nu upplåst!!
+T|Player|Siri|Well done, we have made our way to the spider's house!
+T|Player|Siri|Now we have to get past the rooms to get to the room she's being held captive.
+T|Player|Siri|Look, it seems like another room is unlocked!!
 
 FINISH

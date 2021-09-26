@@ -186,10 +186,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   speedModifier: 1
-  jumpForce: 8
+  jumpForce: 7
   groundCheck: {fileID: 2241870364422326606}
   flashlight: {fileID: 800766685}
-  isFlashlightOn: 0
+  isFlashlightOn: 1
   flashlightOn: {fileID: 21300000, guid: 0cf87f3efc16a9249b1d6a3ac393b46c, type: 3}
   flashlightOff: {fileID: 21300000, guid: fed1f025635df2549990a382610ea552, type: 3}
   JumpSound: {fileID: 8300000, guid: 612e3dfa252c9e74fb320c7c0ab6a1cf, type: 3}

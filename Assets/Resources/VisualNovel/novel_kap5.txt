@@ -1,10 +1,10 @@
 AUDIO|Epitomize
-CHAR|Player.Concern|-100|0|1|1
+CHAR|Player.Neutral|100|0|-1|1
 
-T|Player|Siri|Hej! Kan du snälla hjälpa mig med en sak?
+T|Player|Siri|Do you see that, {PLAYER}?
 CHAR|Player.Disgust|-100|0|1|1
-T|Player|Siri|Min syster Ingrid har blivit kidnappad av en gigantisk spindel!
-T|Player|Siri|Spindeln förde henne genom förtrollade skogen och håller henne fångad i det hemsökta huset och jag är rääädd!
-T|Player|Siri|Jag behöver din hjälp för att rädda henne!
+T|Player|Siri|Ingrid is being held by the giant spider!
+CHAR|Player.Concern|-100|0|1|1
+T|Player|Siri|Run away, away with you!
 
 FINISH

@@ -1,10 +1,13 @@
 AUDIO|Epitomize
-CHAR|Player.Neutral|-100|0|1|1
+CHAR|Player.Disgust|-100|0|1|1
 
-T|Player|Siri|uuughgh det där var läbbigt men vi klarade det!!
-T|Player|Siri|JIPPIE
-T|Player|Siri|Och se där rum två är upplåst!
+T|Player|Siri|Uuughgh that was messy but we made it!!
+CHAR|Player.Neutral|-100|0|1|1
+T|Player|Siri|YIPPEE
+T|Player|Siri|And look, another room is unlocked!
 CHAR|Player.Fear|-100|0|1|1
-T|Player|Siri|Hoppas inte det är läskigare där inne!
+T|Player|Siri|I hope it's not even scarier in there!
+T|Player|Siri|Also, remember to turn off your flashlight (F) while encountering ghosts!
+T|Player|Siri|They have a pretty bad eyesight even though they are ghosts, so the darkness should protect you a bit!
 
 FINISH

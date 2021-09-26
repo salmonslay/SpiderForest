@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,10 +13,11 @@ public class VN_Textbox : MonoBehaviour
 
     public IEnumerator Print(string textToPrint)
     {
+        string parsedText = textToPrint.Replace("{PLAYER}", Environment.UserName);
         core.waiting = false;
         text.text = "";
 
-        foreach (char character in textToPrint)
+        foreach (char character in parsedText)
         {
             //cancel this loop if user wants to skip
             if (core.skip) break;
@@ -26,6 +28,6 @@ public class VN_Textbox : MonoBehaviour
 
         core.skip = false;
         core.waiting = true;
-        text.text = textToPrint;
+        text.text = parsedText;
     }
 }

@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
 
     public SpriteRenderer flashlight;
-    public bool isFlashlightOn = false;
+    public bool isFlashlightOn = true;
     public Sprite flashlightOn;
     public Sprite flashlightOff;
     public AudioClip JumpSound;
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && Mathf.Abs(body.velocity.x) > 0.2)
         {
             WalkSound.Play();
-            
+
         }
 
         else

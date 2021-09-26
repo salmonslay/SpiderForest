@@ -15,10 +15,10 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Vector3 target = nodes[targetIndex].position;
-        transform.position = Vector2.MoveTowards(transform.position, target, 5 * Time.fixedDeltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
         if (transform.position == target)
         {
             if (++targetIndex == nodes.Length) targetIndex = 0;
@@ -43,5 +43,16 @@ public class Elevator : MonoBehaviour
         Transform col = collision.transform;
         if (col.CompareTag("Player"))
             col.parent = null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        for (int i = 0; i < nodes.Length - 1; i++)
+        {
+            Gizmos.DrawLine(nodes[i].position, nodes[i + 1].position);
+        }
+        Gizmos.DrawLine(nodes[nodes.Length - 1].position, nodes[0].position);
+
     }
 }
