@@ -19,7 +19,11 @@ public class VisualNovel : MonoBehaviour
     /// </summary>
     public static void FreezeScene()
     {
-        GameObject.Find("Music").GetComponent<AudioSource>().Pause();
+        GameObject music = GameObject.Find("Music");
+        if (music)
+        {
+            music.GetComponent<AudioSource>().Pause();
+        }
         Time.timeScale = 0;
     }
 
@@ -28,7 +32,11 @@ public class VisualNovel : MonoBehaviour
     /// </summary>
     public static void ContinueScene()
     {
-        GameObject.Find("Music").GetComponent<AudioSource>().Play();
+        GameObject music = GameObject.Find("Music");
+        if (music)
+        {
+            music.GetComponent<AudioSource>().Pause();
+        }
         Time.timeScale = 1;
     }
 }

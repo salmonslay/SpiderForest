@@ -1,10 +1,16 @@
-AUDIO|Epitomize
-CHAR|Player.Neutral|100|0|-1|1
+AUDIO|Final
+CHAR|Player.Neutral|-100|0|1|1
 
 T|Player|Siri|Do you see that, {PLAYER}?
 CHAR|Player.Disgust|-100|0|1|1
 T|Player|Siri|Ingrid is being held by the giant spider!
 CHAR|Player.Concern|-100|0|1|1
 T|Player|Siri|Run away, away with you!
+CHAR|Player.Disgust|-100|0|1|1
+T|Player|Siri|We don't have a choice...
+T|Player|Siri|I will have to kill the spider...
+CHAR|Player.Concern|-100|0|1|1
+T|Player|Siri|Huh? Yeah I know no one has ever defeated one before, but do you think I have any better alternatives?
+T|Player|Siri|If I just...
 
 FINISH

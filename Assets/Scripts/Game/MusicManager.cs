@@ -5,9 +5,8 @@ public class MusicManager : MonoBehaviour
 {
     private void Awake()
     {
-        if (!GameObject.Find("Music"))
+        if (!GameObject.Find("Music") && SceneManager.GetActiveScene().name != "Room3_Fabian")
         {
-            print("starting music");
             GameObject music = new GameObject("Music");
             DontDestroyOnLoad(music);
             AudioSource source = music.AddComponent<AudioSource>();
@@ -16,10 +15,7 @@ public class MusicManager : MonoBehaviour
             source.volume = 0.15f;
             source.Play();
         }
-        else
-        {
-            if (SceneManager.GetActiveScene().name == "Main")
-                Destroy(gameObject);
-        }
+        if (SceneManager.GetActiveScene().name == "Main" || SceneManager.GetActiveScene().name == "Room3_Fabian")
+            Destroy(GameObject.Find("Music"));
     }
 }
