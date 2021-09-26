@@ -18,7 +18,7 @@ public class EnemyHitbox : MonoBehaviour
             {
 
                 enemy.Kill();
-
+                Quest.Increase("kill_slime");
                 Helper.PlayAudio(EnemyKillSound);
             }
         }
