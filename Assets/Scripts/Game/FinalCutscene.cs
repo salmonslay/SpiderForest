@@ -19,6 +19,8 @@ public class FinalCutscene : MonoBehaviour
         GetComponent<Animator>().Play("Cutscene", 0, 0);
         Destroy(GameObject.Find("FinalMusic"));
         Destroy(GameObject.FindGameObjectWithTag("Player"));
+        Destroy(GameObject.Find("AmbienceManager"));
+        Destroy(GameObject.Find("Canvas"));
 
         //switch camera
         cam.gameObject.SetActive(true);
