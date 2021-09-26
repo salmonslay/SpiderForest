@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isFlashlightOn = true;
     public Sprite flashlightOn;
     public Sprite flashlightOff;
-    public AudioClip JumpSound;
+    public AudioClip[] JumpSound;
     public AudioSource WalkSound;
 
     private void Start()
@@ -60,16 +60,12 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && Mathf.Abs(body.velocity.x) > 0.2)
         {
             WalkSound.Play();
-
         }
-
         else
         {
             WalkSound.Pause();
         }
     }
-
-
 
     /// <summary>
     /// Check if character is colliding with ground
@@ -103,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
         Statistics.Increase(Statistics.Keys.Jumps, 1);
         animator.SetTrigger("Jump");
 
-        Helper.PlayAudio(JumpSound);
+        Helper.PlayAudio(JumpSound[Random.Range(0, JumpSound.Length)]);
     }
 
     public void ToggleFlashlight()

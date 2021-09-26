@@ -192,7 +192,11 @@ MonoBehaviour:
   isFlashlightOn: 1
   flashlightOn: {fileID: 21300000, guid: 0cf87f3efc16a9249b1d6a3ac393b46c, type: 3}
   flashlightOff: {fileID: 21300000, guid: fed1f025635df2549990a382610ea552, type: 3}
-  JumpSound: {fileID: 8300000, guid: 612e3dfa252c9e74fb320c7c0ab6a1cf, type: 3}
+  JumpSound:
+  - {fileID: 8300000, guid: 393eaedf75af02846b9101e3b9f6d8c3, type: 3}
+  - {fileID: 8300000, guid: 7fcc27a20138d4942957418d1094a806, type: 3}
+  - {fileID: 8300000, guid: 68c1f3c30bcb37141853cd8a21cfd50c, type: 3}
+  - {fileID: 8300000, guid: 644b165176526674c8d8266bc4276b53, type: 3}
   WalkSound: {fileID: 286903562}
 --- !u!114 &2241870362616591359
 MonoBehaviour:
