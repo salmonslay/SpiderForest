@@ -25,12 +25,15 @@ public class LevelDoor : MonoBehaviour
     [Tooltip("Original position for the levelText. Automatically assigned.")]
     private Vector3 levelTextPos;
 
+    [Tooltip("Whether you need to unlock this door or not")]
+    [SerializeField] private bool bypassLock = false;
+
     private void Start()
     {
         levelCanvas.GetComponentInChildren<Text>().text = level.levelName;
         levelTextPos = levelCanvas.transform.position;
 
-        if (level.Unlocked)
+        if (level.Unlocked || bypassLock)
         {
             doorClosed.SetActive(false);
         }
@@ -42,7 +45,7 @@ public class LevelDoor : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isPlayerTouching)
         {
             // try to go to a level (through this door)
-            if (level.Unlocked)
+            if (level.Unlocked || bypassLock)
                 Enter();
             else
                 ShakeDoor();

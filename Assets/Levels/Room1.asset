@@ -16,4 +16,4 @@ MonoBehaviour:
   levelName: The spiders home
   levelDescription: We're in! But what do we do from here?
   levelIcon: {fileID: 21300000, guid: 538b81b053a733544a580de42e26c8aa, type: 3}
-  alwaysUnlocked: 1
+  alwaysUnlocked: 0

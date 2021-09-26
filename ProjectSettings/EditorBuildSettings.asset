@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Room1_nora.unity
     guid: 6e9905f35172b984ba948329acbbd9a0
   - enabled: 1
-    path: Assets/Scenes/Room_2.unity
+    path: Assets/Scenes/Room3_Fabian.unity
     guid: c4f699f67bf21d548a46c19d1171d26a
   - enabled: 1
-    path: Assets/Scenes/Room_3.unity
+    path: Assets/Scenes/Room2_Emma.unity
     guid: d669d6f71244d5f45bea857ad6943b80
   - enabled: 1
     path: Assets/Scenes/Bonus1.unity

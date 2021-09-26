@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls the main menu and its panels
@@ -58,6 +59,13 @@ public class MainManager : MonoBehaviour
         Helper.PlayAudio(select);
     }
 
+    public void NukeStats()
+    {
+        Debug.LogWarning("All stats nuked.");
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Main");
+    }
+
     public void Quit()
     {
         Application.Quit();
@@ -84,6 +92,7 @@ public class MainManager : MonoBehaviour
 
             case Menu.Credits:
                 return creditsMenu;
+
             case Menu.Stats:
                 return statsMenu;
 
