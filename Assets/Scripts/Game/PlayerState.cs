@@ -24,7 +24,6 @@ public class PlayerState : MonoBehaviour
     private void Start()
     {
         respawnPosition = GameObject.FindGameObjectWithTag("Respawn").transform.position;
-        UIManager.Instance.HP.maxValue = maxHP;
         Spawn();
 
         gameObject.AddComponent<MusicManager>();
@@ -32,7 +31,7 @@ public class PlayerState : MonoBehaviour
 
     private void Update()
     {
-        UIManager.Instance.HP.value = hp;
+        UIManager.Instance.HP.fillAmount = (float)hp / maxHP;
         UIManager.Instance.Coins.text = coins.ToString();
     }
 

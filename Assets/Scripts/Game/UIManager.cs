@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     public Text Coins;
-    public Slider HP;
+    public Image HP;
     public Transform PowerUpHolder;
 
     private void Awake()

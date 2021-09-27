@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 3
-  maxHP: 3
+  maxHP: 4
 --- !u!50 &2241870362616591346
 Rigidbody2D:
   serializedVersion: 4
