@@ -30,7 +30,7 @@ public class FinalCutscene : MonoBehaviour
         Destroy(Camera.main.gameObject);
 
         //play boss music
-        Helper.PlayAudio(final).volume = 0.3f;
+        Helper.PlayAudio(final).volume = 0.4f;
 
         //start credits
         yield return new WaitForSeconds(18f);
