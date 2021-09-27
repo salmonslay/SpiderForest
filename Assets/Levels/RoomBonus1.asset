@@ -15,5 +15,5 @@ MonoBehaviour:
   sceneID: Bonus1
   levelName: The eerie nest
   levelDescription: Another basement? I got a feeling this will be a tough one...
-  levelIcon: {fileID: 0}
+  levelIcon: {fileID: 21300000, guid: d6406d600ecd76949b8a7f07977d5c32, type: 3}
   alwaysUnlocked: 0
