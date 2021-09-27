@@ -718,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nuke
       objectReference: {fileID: 0}
+    - target: {fileID: 3991156959671260396, guid: c72d430fb7ad99b45b320eaa8e3650dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3991156959671260398, guid: c72d430fb7ad99b45b320eaa8e3650dd, type: 3}
       propertyPath: m_Text
       value: '<color=red>nuke all my stats</color>
