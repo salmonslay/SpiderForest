@@ -35,7 +35,7 @@ public class VisualNovel : MonoBehaviour
         GameObject music = GameObject.Find("Music");
         if (music)
         {
-            music.GetComponent<AudioSource>().Pause();
+            music.GetComponent<AudioSource>().Play();
         }
         Time.timeScale = 1;
     }
