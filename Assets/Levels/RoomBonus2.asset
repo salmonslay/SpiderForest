@@ -15,5 +15,5 @@ MonoBehaviour:
   sceneID: Bonus2
   levelName: The deep pitfall
   levelDescription: There has to be something great up there... Right?
-  levelIcon: {fileID: 0}
+  levelIcon: {fileID: 21300000, guid: e82da0981c768ff40aecba5cc81074db, type: 3}
   alwaysUnlocked: 0

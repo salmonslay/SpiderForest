@@ -7,6 +7,7 @@ public class Level0Manager : MonoBehaviour
 {
     public static State state = State.NeverPlayed;
     [SerializeField] private Transform spawnPoint;
+    [SerializeField] private Level level1;
 
     private void Awake()
     {
@@ -21,11 +22,6 @@ public class Level0Manager : MonoBehaviour
         if (state == State.Completed2) VisualNovel.Play("kap4");
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-    }
-
     public enum State
     {
         NeverPlayed, //play chap1 at start - chap2 at house eter
@@ -38,6 +34,7 @@ public class Level0Manager : MonoBehaviour
     {
         if (collision.CompareTag("Player") && state == State.NeverPlayed)
         {
+            PlayerPrefs.SetInt(level1.CompletionKey, 1);
             VisualNovel.Play("kap2");
             state = State.Completed;
         }

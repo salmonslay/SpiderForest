@@ -7339,6 +7339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 312516916}
+  level1: {fileID: 11400000, guid: 40b9772d6b431be478c625401d37fe7e, type: 2}
 --- !u!4 &853393708
 Transform:
   m_ObjectHideFlags: 0
