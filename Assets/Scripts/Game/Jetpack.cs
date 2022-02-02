@@ -21,7 +21,7 @@ public class Jetpack : MonoBehaviour
 	private ParticleSystem _particles;
 	ParticleSystem.MainModule _particlesMain;
 
-	public bool IsUnlocked = true; // TODO: Default to false
+	public bool IsUnlocked = false;
 
 
 	private void Awake()
