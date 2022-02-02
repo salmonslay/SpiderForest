@@ -2,26 +2,37 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 3f;
+    #region Variables
+    [Header("Player properties")]
+    [Tooltip("The speed at which the player moves")]
+    [SerializeField] private float speed = 3f;
+    [Tooltip("The speed modifier applied to the player when the player is moving")]
     public float speedModifier = 1f;
+    [Tooltip("The force applied to the player when the player jumps")]
     public float jumpForce = 2.5f;
     private float horizontal = 0f;
-
-    public Transform groundCheck;
+    
+    [Header("Player components")]
+    [SerializeField] private Transform groundCheck;
     private Rigidbody2D body;
     private Animator animator;
 
-    public SpriteRenderer flashlight;
-    public bool isFlashlightOn = true;
-    public Sprite flashlightOn;
-    public Sprite flashlightOff;
-    public AudioClip[] JumpSound;
-    public AudioSource WalkSound;
 
+    [SerializeField] private SpriteRenderer flashlight;
+    public bool isFlashlightOn { get; private set; } = true;
+    [SerializeField] private Sprite flashlightOn;
+    [SerializeField] private Sprite flashlightOff;
+    [SerializeField] private AudioClip[] JumpSound;
+    [SerializeField] private AudioSource WalkSound;
+
+    private Jetpack _jetpack;
+    #endregion
     private void Start()
     {
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
+        _jetpack = GetComponent<Jetpack>();
+        
 
         // turn on flashlight sprite
         flashlight.enabled = true;
@@ -31,9 +42,18 @@ public class PlayerMovement : MonoBehaviour
     {
         bool isGrounded = IsGrounded();
 
-        //Check jumping
+        //Check jumping & jetpack
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             Jump();
+
+        if (Input.GetKey(KeyCode.Space) && _jetpack.IsUnlocked)
+        {
+            _jetpack.Use();
+        }
+        else
+        {
+            _jetpack.Refuel();
+        }
 
         //Check controls
         horizontal = Input.GetAxis("Horizontal");
