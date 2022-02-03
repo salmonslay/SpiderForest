@@ -10,7 +10,7 @@ public class Jetpack : MonoBehaviour
     
 	[Tooltip("The current jetpack fuel.")]
 	private float _currentFuel = 0f;
-    
+
 	[Tooltip("Maximum velocity the player can reach when the jetpack is enabled")]
 	[SerializeField] private float _maximumVelocity = 5f;
     
@@ -30,6 +30,9 @@ public class Jetpack : MonoBehaviour
 		_currentFuel = _maximumFuel;
 		_particles = GetComponentInChildren<ParticleSystem>();
 		_particlesMain = _particles.main;
+		
+		_particles.Stop();
+		_particles.Clear();
 	}
 
 	/// <summary>
@@ -44,7 +47,7 @@ public class Jetpack : MonoBehaviour
 				_body.velocity += _jetpackForce * Time.deltaTime;
 			else
 				_body.velocity = new Vector2(0f, _maximumVelocity);
-			
+
 			_particlesMain.loop = true;
 			_particles.Play();
 		}
