@@ -19,7 +19,9 @@ public class Jetpack : MonoBehaviour
 		
 	private Rigidbody2D _body;
 	private ParticleSystem _particles;
-	ParticleSystem.MainModule _particlesMain;
+	private ParticleSystem.MainModule _particlesMain;
+	public AudioSource JetpackSound;
+
 
 	public bool IsUnlocked = false;
 
@@ -54,6 +56,7 @@ public class Jetpack : MonoBehaviour
 		else
 		{
 			_particlesMain.loop = false;
+			JetpackSound.Stop();
 		}
 	}
 
