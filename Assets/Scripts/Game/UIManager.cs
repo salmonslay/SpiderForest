@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public Text Coins;
     public Image HP;
     public Transform PowerUpHolder;
+    public Image JetpackFuel;
 
     private void Awake()
     {

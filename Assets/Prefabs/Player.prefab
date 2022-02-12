@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &800766686
 Transform:
   m_ObjectHideFlags: 0
@@ -5292,8 +5292,9 @@ MonoBehaviour:
   _maximumFuel: 3
   _maximumVelocity: 10
   IsJetpackEnabled: 0
+  _maximumCameraFOV: 70
   JetpackSound: {fileID: 1804665591}
-  IsUnlocked: 1
+  IsUnlocked: 0
 --- !u!1 &2241870364422326593
 GameObject:
   m_ObjectHideFlags: 0
