@@ -11,6 +11,8 @@ public class PowerKey : PowerUp, IPowerUp
     {
         StartCoroutine(base.Activate(collision));
 
+        Quest.Increase("collect_key");
+
         print($"Level {LevelToUnlock.ID} unlocked by key.");
         PlayerPrefs.SetInt(LevelToUnlock.CompletionKey, 1);
         yield return null;

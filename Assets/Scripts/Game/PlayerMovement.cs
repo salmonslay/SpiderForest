@@ -46,11 +46,13 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(moveBy * Time.deltaTime * speed * speedModifier);
         Statistics.Increase(Statistics.Keys.MetersRan, Mathf.Abs(horizontal * Time.deltaTime * speed * speedModifier));
 
+        float scale = 0.8f;
+
         //Flip character
         if (horizontal > 0.2f)
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(scale, scale, scale);
         else if (horizontal < -0.2f)
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-scale, scale, scale);
 
         if (Input.GetKeyDown(KeyCode.F))
         {
