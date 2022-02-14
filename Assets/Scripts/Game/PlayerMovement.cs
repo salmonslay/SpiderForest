@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(moveBy * Time.deltaTime * speed * speedModifier);
         Statistics.Increase(Statistics.Keys.MetersRan, Mathf.Abs(horizontal * Time.deltaTime * speed * speedModifier));
 
-        float scale = 0.8f;
+        float scale = 0.7f;
 
         //Flip character
         if (horizontal > 0.2f)
