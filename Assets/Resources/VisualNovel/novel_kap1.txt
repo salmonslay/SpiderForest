@@ -2,9 +2,12 @@ AUDIO|Epitomize
 CHAR|Player.Concern|-100|0|1|1
 
 T|Player|Siri|Hey! {PLAYER}! Can you please help me?
-CHAR|Player.Disgust|-100|0|1|1
-T|Player|Siri|My sister Ingrid has been kidnapped by a giant spider!
-T|Player|Siri|The spider led her through the bewitched forest and keeps her trapped in the haunted house and I'm too scared to do it alone!
+T|Player|Siri|My sister has been kidnapped by a giant spider!
+T|Player|Siri|I'm too scared to go look for her alone. 
 T|Player|Siri|I need your help to save her!
+T|Player|Siri|I'm pretty sure I saw it take her into that old abandoned house.
+CHAR|Player.Neutral|-100|0|1|1
+T|Player|Siri|We just have to follow this path to the house and collect anything we see on the way.
+T|Player|Siri|We can do this!
 
 FINISH

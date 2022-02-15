@@ -1,8 +1,10 @@
 AUDIO|Epitomize
 CHAR|Player.Neutral|-100|0|1|1
 
-T|Player|Siri|Well done, we have made our way to the spider's house!
-T|Player|Siri|Now we have to get past the rooms to get to the room she's being held captive.
-T|Player|Siri|Look, it seems like another room is unlocked!!
+T|Player|Siri|We did it!
+T|Player|Siri|Now we just have to...
+CHAR|Player.Fear|-100|0|1|1
+T|Player|Siri|... enter this scary house in the middle of the woods.
+T|Player|Siri|Yippie.
 
 FINISH
