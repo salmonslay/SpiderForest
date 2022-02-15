@@ -32,8 +32,9 @@ public class PlayerMovement : MonoBehaviour
         bool isGrounded = IsGrounded();
 
         //Check jumping
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && VisualNovel.IsPlaying == false)
             Jump();
+        
 
         //Check controls
         horizontal = Input.GetAxis("Horizontal");

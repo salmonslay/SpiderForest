@@ -19,6 +19,7 @@ public class VisualNovel : MonoBehaviour
     /// </summary>
     public static void FreezeScene()
     {
+        IsPlaying = true;
         GameObject music = GameObject.Find("Music");
         if (music)
         {
@@ -32,6 +33,7 @@ public class VisualNovel : MonoBehaviour
     /// </summary>
     public static void ContinueScene()
     {
+        IsPlaying = false;
         GameObject music = GameObject.Find("Music");
         if (music)
         {
@@ -39,4 +41,6 @@ public class VisualNovel : MonoBehaviour
         }
         Time.timeScale = 1;
     }
+
+    public static bool IsPlaying = false;
 }
