@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         bool isGrounded = IsGrounded();
 
         //Check jumping & jetpack
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !VisualNovel.IsPlaying)
         {
             if (isGrounded)
                 Jump();
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
                 _jetpack.JetpackSound.Play();
         }
 
-        if (Input.GetKey(KeyCode.Space) && _jetpack.IsUnlocked)
+        if (Input.GetKey(KeyCode.Space) && _jetpack.IsUnlocked && !VisualNovel.IsPlaying)
         {
             _jetpack.Use();
         }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class VisualNovel : MonoBehaviour
 {
+    public static bool IsPlaying { get; private set; }
     /// <summary>
     /// Start playing a visual novel.
     /// </summary>
@@ -19,6 +20,7 @@ public class VisualNovel : MonoBehaviour
     /// </summary>
     public static void FreezeScene()
     {
+        IsPlaying = true;
         GameObject music = GameObject.Find("Music");
         if (music)
         {
@@ -32,6 +34,7 @@ public class VisualNovel : MonoBehaviour
     /// </summary>
     public static void ContinueScene()
     {
+        IsPlaying = false;
         GameObject music = GameObject.Find("Music");
         if (music)
         {
