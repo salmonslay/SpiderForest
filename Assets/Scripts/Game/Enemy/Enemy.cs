@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     /// </summary>
     public void Kill()
     {
+        print("im dead");
         isAlive = false;
         GetComponent<BoxCollider2D>().isTrigger = true;
         body.AddForce(new Vector2(movementDirection, 4f), ForceMode2D.Impulse);

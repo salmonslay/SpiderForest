@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float speedModifier = 1f;
     public float jumpForce = 2.5f;
     private float horizontal = 0f;
+    public static int direction = 1;
 
     public Transform groundCheck;
     private Rigidbody2D body;
@@ -17,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public Sprite flashlightOff;
     public AudioClip[] JumpSound;
     public AudioSource WalkSound;
+    public GameObject shot;
+    public bool canShoot = false;
 
     private void Start()
     {
@@ -37,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
 
         //Check controls
         horizontal = Input.GetAxis("Horizontal");
+
+        if (horizontal > 0) direction = 1;
+        else if (horizontal < 0) direction = -1;
 
         animator.SetBool("IsGrounded", isGrounded);
         animator.SetFloat("Velocity", Mathf.Abs(horizontal));
@@ -67,6 +73,16 @@ public class PlayerMovement : MonoBehaviour
         {
             WalkSound.Pause();
         }
+
+        //för att kunna skjuta
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (canShoot)
+            {
+                Instantiate(shot, transform.position, Quaternion.identity);
+            }
+        }
+
     }
 
     /// <summary>
