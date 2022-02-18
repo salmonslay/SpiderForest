@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01538468ba9209445bdebb7001e68a38, type: 3}
-  m_Name: RoomBonus2
+  m_Name: RoomBonus2 1
   m_EditorClassIdentifier: 
   sceneID: Bonus2
   levelName: The deep pitfall

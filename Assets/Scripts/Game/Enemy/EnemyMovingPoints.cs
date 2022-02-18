@@ -37,7 +37,7 @@ public class EnemyMovingPoints : Enemy
         }
     }
 
-    private void Update()
+    internal void Update()
     {
         Vector3 target = points[targetIndex];
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
@@ -56,7 +56,7 @@ public class EnemyMovingPoints : Enemy
         renderer.color = player.isFlashlightOn ? new Color(1, 1, 1, 0.5f) : Color.white;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    internal void OnTriggerEnter2D(Collider2D collision)
     {
         // if enemy hits a player - do harm
         if (collision.gameObject.CompareTag("Player"))

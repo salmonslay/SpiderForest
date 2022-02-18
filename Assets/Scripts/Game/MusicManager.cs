@@ -5,6 +5,7 @@ public class MusicManager : MonoBehaviour
 {
     private void Awake()
     {
+        AudioListener.volume = 0.5f;
         if (!GameObject.Find("Music") && SceneManager.GetActiveScene().name != "Room3_Fabian")
         {
             GameObject music = new GameObject("Music");
