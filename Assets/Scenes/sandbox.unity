@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!212 &82518325 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 166598244748223521, guid: 83df7c268134d7543bb6341bcf294a13, type: 3}
+  m_PrefabInstance: {fileID: 2139437106691018548}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &173106135
 GameObject:
   m_ObjectHideFlags: 0
@@ -7042,6 +7047,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 166598244748223521, guid: 83df7c268134d7543bb6341bcf294a13, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4fa457d6a8cd2284e883c6fc0fc2329e, type: 3}
     - target: {fileID: 166598245212302745, guid: 83df7c268134d7543bb6341bcf294a13, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7091,9 +7100,25 @@ PrefabInstance:
       value: Poltergeist
       objectReference: {fileID: 0}
     - target: {fileID: 2947217632675806433, guid: 83df7c268134d7543bb6341bcf294a13, type: 3}
+      propertyPath: newSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79f530779c91a474fb5df93474bcb2eb, type: 3}
+    - target: {fileID: 2947217632675806433, guid: 83df7c268134d7543bb6341bcf294a13, type: 3}
+      propertyPath: idleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4fa457d6a8cd2284e883c6fc0fc2329e, type: 3}
+    - target: {fileID: 2947217632675806433, guid: 83df7c268134d7543bb6341bcf294a13, type: 3}
       propertyPath: attackForce.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2947217632675806433, guid: 83df7c268134d7543bb6341bcf294a13, type: 3}
+      propertyPath: stretchSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 66873fdb5b6e74f40a74c5f0376fee9c, type: 3}
+    - target: {fileID: 2947217632675806433, guid: 83df7c268134d7543bb6341bcf294a13, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 82518325}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83df7c268134d7543bb6341bcf294a13, type: 3}
 --- !u!1001 &2241870363944110438
