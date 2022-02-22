@@ -273,7 +273,7 @@ MonoBehaviour:
   damage: 0
   speed: 0
   canSeePlayer: {fileID: 21300000, guid: 4fa457d6a8cd2284e883c6fc0fc2329e, type: 3}
-  lostInDarkness: {fileID: 21300000, guid: 66873fdb5b6e74f40a74c5f0376fee9c, type: 3}
+  lostInDarkness: {fileID: 21300000, guid: 4fa457d6a8cd2284e883c6fc0fc2329e, type: 3}
   throwableItem: {fileID: 6193633198689382671, guid: d51fd8df94fa5904a83e8654940d3d6d, type: 3}
   attackForce: {x: 1, y: 1, z: 0}
   attackDistance: 8
