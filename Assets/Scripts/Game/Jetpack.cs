@@ -82,14 +82,13 @@ public class Jetpack : MonoBehaviour
     /// </summary>
     public void Refuel()
     {
-        if (_currentFuel<_maximumFuel)
+        if (_currentFuel < _maximumFuel)
         {
-            _currentFuel += Time.deltaTime;
+            _currentFuel += Time.deltaTime * 0.5f;
         }
         _particlesMain.loop = false;
 		
-        if(_camera.fieldOfView > 65)
+        if (_camera.fieldOfView > 65)
             _camera.fieldOfView -= Time.deltaTime;
-		
     }
 }

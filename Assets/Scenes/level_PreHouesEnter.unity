@@ -35093,6 +35093,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2021780319, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
+      propertyPath: IsUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021780319, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
       propertyPath: _maximumCameraFOV
       value: 70
       objectReference: {fileID: 0}
