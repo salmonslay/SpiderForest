@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -38,18 +40,9 @@ public class PlayerMovement : MonoBehaviour
         flashlight.enabled = true;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         bool isGrounded = IsGrounded();
-
-        //Check jumping & jetpack
-        if (Input.GetKeyDown(KeyCode.Space) && !VisualNovel.IsPlaying)
-        {
-            if (isGrounded)
-                Jump();
-            if (_jetpack.IsUnlocked)
-                _jetpack.JetpackSound.Play();
-        }
 
         if (Input.GetKey(KeyCode.Space) && _jetpack.IsUnlocked && !VisualNovel.IsPlaying)
         {
@@ -78,11 +71,6 @@ public class PlayerMovement : MonoBehaviour
         else if (horizontal < -0.2f)
             transform.localScale = new Vector3(-1, 1, 1);
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            ToggleFlashlight();
-        }
-
         if (isGrounded && Mathf.Abs(body.velocity.x) > 0.2)
         {
             WalkSound.Play();
@@ -90,6 +78,26 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             WalkSound.Pause();
+        }
+    }
+
+    private void Update()
+    {
+        bool isGrounded = IsGrounded();
+        
+        //Check jumping
+        if (Input.GetKeyDown(KeyCode.Space) && !VisualNovel.IsPlaying)
+        {
+            if (isGrounded)
+                Jump();
+            
+            if (_jetpack.IsUnlocked)
+                _jetpack.JetpackSound.Play();
+        }
+        
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ToggleFlashlight();
         }
     }
 
