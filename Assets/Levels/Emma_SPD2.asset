@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01538468ba9209445bdebb7001e68a38, type: 3}
-  m_Name: Emm_SPD
+  m_Name: Emma_SPD2
   m_EditorClassIdentifier: 
-  sceneID: Emma_SPD
-  levelName: EmmaAlmer_SPD
-  levelDescription: 'Level one '
+  sceneID: Emma_SPD2
+  levelName: Level2
+  levelDescription: Level2
   levelIcon: {fileID: 0}
   alwaysUnlocked: 1
