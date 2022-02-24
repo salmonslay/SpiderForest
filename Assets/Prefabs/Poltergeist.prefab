@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 52b37ab37ad2a414a885abd365394513, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fa457d6a8cd2284e883c6fc0fc2329e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -267,17 +267,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b020ca704c78d704d8d1e133a65953be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAlive: 1
-  body: {fileID: 0}
-  movementDirection: 1
-  damage: 0
-  speed: 0
-  canSeePlayer: {fileID: 21300000, guid: 4fa457d6a8cd2284e883c6fc0fc2329e, type: 3}
-  lostInDarkness: {fileID: 21300000, guid: 4fa457d6a8cd2284e883c6fc0fc2329e, type: 3}
   throwableItem: {fileID: 6193633198689382671, guid: d51fd8df94fa5904a83e8654940d3d6d, type: 3}
-  attackForce: {x: 1, y: 1, z: 0}
+  attackForce: {x: 0.5, y: 1, z: 0}
   attackDistance: 8
   attackCooldown: 2
+  spriteRenderer: {fileID: 166598244748223521}
+  idleSprite: {fileID: 21300000, guid: 4fa457d6a8cd2284e883c6fc0fc2329e, type: 3}
+  newSprite: {fileID: 21300000, guid: 79f530779c91a474fb5df93474bcb2eb, type: 3}
+  stretchSprite: {fileID: 21300000, guid: 66873fdb5b6e74f40a74c5f0376fee9c, type: 3}
 --- !u!1 &166598245212302746
 GameObject:
   m_ObjectHideFlags: 0
