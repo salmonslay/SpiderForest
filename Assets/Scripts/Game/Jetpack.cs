@@ -20,6 +20,9 @@ public class Jetpack : MonoBehaviour
     
     [Tooltip("The maximum camera FOV with a jetpack enabled")]
     [SerializeField] private float _maximumCameraFOV = 70f;
+
+    [Tooltip("The default FOV to return to when jetpack is not in use")]
+    private float _defaultCameraFOV;
 		
     private Rigidbody2D _body;
     private ParticleSystem _particles;
@@ -35,7 +38,7 @@ public class Jetpack : MonoBehaviour
     private void Awake()
     {
         _camera = Camera.main;
-        _camera.fieldOfView = 65;
+        _defaultCameraFOV = _camera.fieldOfView;
         _body = GetComponent<Rigidbody2D>();
         _currentFuel = _maximumFuel;
         _particles = GetComponentInChildren<ParticleSystem>();
@@ -88,7 +91,7 @@ public class Jetpack : MonoBehaviour
         }
         _particlesMain.loop = false;
 		
-        if (_camera.fieldOfView > 65)
+        if (_camera.fieldOfView > _defaultCameraFOV)
             _camera.fieldOfView -= Time.deltaTime;
     }
 }
