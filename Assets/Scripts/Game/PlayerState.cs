@@ -63,6 +63,7 @@ public class PlayerState : MonoBehaviour
     /// </summary>
     public void Spawn()
     {
+        GetComponent<Jetpack>().ResetFuel();
         hp = maxHP;
         transform.position = respawnPosition;
     }

@@ -50,7 +50,7 @@ public class Jetpack : MonoBehaviour
 
     private void Update()
     {
-		UIManager.Instance.JetpackFuel.enabled = IsUnlocked;
+        UIManager.Instance.JetpackFuel.enabled = IsUnlocked;
         UIManager.Instance.JetpackFuel.fillAmount = _currentFuel / _maximumFuel;
     }
 
@@ -93,5 +93,13 @@ public class Jetpack : MonoBehaviour
 		
         if (_camera.fieldOfView > _defaultCameraFOV)
             _camera.fieldOfView -= Time.deltaTime;
+    }
+
+    /// <summary>
+    /// Completely fuel this jetpack
+    /// </summary>
+    public void ResetFuel()
+    {
+        _currentFuel = _maximumFuel;
     }
 }
