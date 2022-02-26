@@ -1408,7 +1408,7 @@ PrefabInstance:
     - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
       propertyPath: level
       value: 
-      objectReference: {fileID: 11400000, guid: 4178a68c282d9af44b51c7fbedc69d93, type: 2}
+      objectReference: {fileID: 11400000, guid: fceb4878e6217794c82545c003058594, type: 2}
     - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
       propertyPath: questCondition
       value: 

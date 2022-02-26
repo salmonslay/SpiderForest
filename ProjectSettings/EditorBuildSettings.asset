@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Room2_Emma.unity
     guid: d669d6f71244d5f45bea857ad6943b80
   - enabled: 1
+    path: Assets/Scenes/SPD2.unity
+    guid: 63790307bafa4bb42805aa865d3cf4c9
+  - enabled: 1
     path: Assets/Scenes/Bonus1.unity
     guid: 89c413ec961d96e4fba681ae38b6f669
   - enabled: 1

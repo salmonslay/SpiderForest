@@ -339,7 +339,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "<b><size=20>Game</size></b>\n   Nora Gate\n   Emma Almer\n   Fabian Lindgren\n\n<b><size=20>Assets</size>\n 
-    Audio</b>\n    Mittsies\n    Dean Herbert\n\n  <b>Sprites</b>\n    Nora Gate"
+    Audio</b>\n    Mittsies\n\n  <b>Sprites</b>\n    Nora Gate"
 --- !u!222 &81935304
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -612,6 +612,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3991156959671260399, guid: c72d430fb7ad99b45b320eaa8e3650dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991156959671260400, guid: c72d430fb7ad99b45b320eaa8e3650dd, type: 3}
+      propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3991156959671260400, guid: c72d430fb7ad99b45b320eaa8e3650dd, type: 3}
@@ -2913,6 +2917,7 @@ MonoBehaviour:
   rect: {fileID: 79118756}
   levels:
   - {fileID: 11400000, guid: 85dccefff7d3ba84ba6ee847910485b9, type: 2}
+  - {fileID: 11400000, guid: fceb4878e6217794c82545c003058594, type: 2}
 --- !u!95 &1195717700
 Animator:
   serializedVersion: 3
