@@ -79,6 +79,8 @@ public class PlayerMovement : MonoBehaviour
         {
             WalkSound.Pause();
         }
+        
+        body.velocity = Vector2.ClampMagnitude(body.velocity, 20f);
     }
 
     private void Update()
