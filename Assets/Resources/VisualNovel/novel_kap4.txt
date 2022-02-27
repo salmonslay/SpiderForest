@@ -1,10 +1,9 @@
 AUDIO|Epitomize
 CHAR|Player.Fear|-100|0|1|1
 
-T|Player|Siri|BBRRRRRR!!!! That was really nasty!!
-DEL|Player.Fear
-CHAR|Player.Neutral|-100|0|1|1
-T|Player|Siri|But we succeeded!
-T|Player|Siri|My sister Ingrid should be in the last room, do your best!
+T|Player|Siri|P-p-poltergeists!
+CHAR|Player.Concern|-100|0|1|1
+T|Player|Siri|The flashlight trick won't work on them. We'll just have to avoid them!
+T|Player|Siri|They throw a lot of items, watch out and don't get hit!
 
 FINISH

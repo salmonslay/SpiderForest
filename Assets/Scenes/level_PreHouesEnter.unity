@@ -708,7 +708,7 @@ PrefabInstance:
     - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
       propertyPath: level
       value: 
-      objectReference: {fileID: 11400000, guid: fca37f1e4289a9d45aa0827d84fd9f43, type: 2}
+      objectReference: {fileID: 11400000, guid: 40b9772d6b431be478c625401d37fe7e, type: 2}
     - target: {fileID: 2180980545421571742, guid: 5c519b936eebfb24bb578d028b34c6e2, type: 3}
       propertyPath: questCondition
       value: 
@@ -20831,7 +20831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2241870362616591344, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2241870362616591344, guid: 182898241f9920540b48a2152ac9e49e, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,13 +1,13 @@
 AUDIO|Epitomize
 CHAR|Player.Disgust|-100|0|1|1
 
-T|Player|Siri|Uuughgh that was messy but we made it!!
+T|Player|Siri|Yup, looks like a classic haunted house.
 CHAR|Player.Neutral|-100|0|1|1
-T|Player|Siri|YIPPEE
-T|Player|Siri|And look, another room is unlocked!
+T|Player|Siri|As long as we don't encounter too many ghosts, we'll be fine!
 CHAR|Player.Fear|-100|0|1|1
-T|Player|Siri|I hope it's not even scarier in there!
-T|Player|Siri|Also, remember to turn off your flashlight (F) while encountering ghosts!
-T|Player|Siri|They have a pretty bad eyesight even though they are ghosts, so the darkness should protect you a bit!
+T|Player|Siri|I'm not gonna jinx us, though. This place reeks of plasma.
+CHAR|PLayer.Neutral|-100|0|1|1
+T|Player|Siri|Luckily for us, ghosts have pretty bad eyesight. Turning off the flashlight (F) helps a lot!
+T|Player|Siri|It won't always work, and it'll be harder for us to see, but they're less likely to find and hit us in the dark!
 
 FINISH
