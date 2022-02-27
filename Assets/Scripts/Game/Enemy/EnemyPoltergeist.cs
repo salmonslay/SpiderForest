@@ -82,7 +82,7 @@ public class EnemyPoltergeist : MonoBehaviour
             if (collision.GetComponent<PlayerMovement>().isFlashlightOn || Random.Range(0, 5) == 2)
             {
                 PlayerState state = collision.gameObject.GetComponent<PlayerState>();
-                state.Harm(1);
+                state.Harm(2);
             }
         }
     }

@@ -1,7 +1,7 @@
 AUDIO|Epitomize
 CHAR|Player.Disgust|-100|0|1|1
 
-T|Player|Siri|Yup, looks like a classic haunted house.
+T|Player|Siri|Yup, looks like your typical classic haunted house.
 CHAR|Player.Neutral|-100|0|1|1
 T|Player|Siri|As long as we don't encounter too many ghosts, we'll be fine!
 CHAR|Player.Fear|-100|0|1|1
