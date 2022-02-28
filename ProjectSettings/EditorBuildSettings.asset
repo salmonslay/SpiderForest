@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/level_PreHouesEnter.unity
     guid: 7d3d54083250e264483b986c525e3d60
   - enabled: 1
-    path: Assets/Scenes/Room1_nora.unity
+    path: Assets/Scenes/Room1.unity
     guid: 6e9905f35172b984ba948329acbbd9a0
   - enabled: 1
     path: Assets/Scenes/Room3_Fabian.unity
