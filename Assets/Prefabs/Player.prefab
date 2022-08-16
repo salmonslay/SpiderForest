@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 2241870362616591356}
   - component: {fileID: 4453751754201980428}
   - component: {fileID: 286903562}
+  - component: {fileID: 1692899028}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -160,7 +161,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 7eb833d916695194597b599b43eec71d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -212,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   maxHP: 4
+  sprite: {fileID: 0}
 --- !u!50 &2241870362616591346
 Rigidbody2D:
   serializedVersion: 4
@@ -374,6 +376,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &1692899028
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241870362616591349}
+  m_Enabled: 1
 --- !u!1 &2241870364422326593
 GameObject:
   m_ObjectHideFlags: 0

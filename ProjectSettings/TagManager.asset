@@ -9,6 +9,7 @@ TagManager:
   - LevelDoor
   - VisualNovel
   - VN_Character
+  - Polteritem
   layers:
   - Default
   - TransparentFX

@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerState : MonoBehaviour
 {
@@ -6,6 +8,7 @@ public class PlayerState : MonoBehaviour
     private int coins = 0;
     public int maxHP = 3;
     private Vector3 _respawnPosition;
+    public SpriteRenderer sprite;
 
     [HideInInspector]
     public Vector3 respawnPosition
@@ -51,6 +54,7 @@ public class PlayerState : MonoBehaviour
     public void Harm(int damage = 1)
     {
         hp -= damage;
+        StartCoroutine(FlashRed());
 
         if (hp <= 0)
         {
@@ -73,4 +77,12 @@ public class PlayerState : MonoBehaviour
         Quest.Increase("collect_coins", amount);
         Statistics.Increase(Statistics.Keys.Coins, amount);
     }
+    public IEnumerator FlashRed()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.15f);
+        sprite.color = Color.white;
+    }
+
+
 }
