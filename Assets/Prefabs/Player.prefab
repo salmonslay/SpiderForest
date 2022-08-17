@@ -213,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 3
   maxHP: 4
-  sprite: {fileID: 0}
+  sprite: {fileID: 2241870362616591347}
 --- !u!50 &2241870362616591346
 Rigidbody2D:
   serializedVersion: 4
